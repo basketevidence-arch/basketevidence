@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /generador.html
+
+Sitemap: https://basketevidence.com/sitemap.xml

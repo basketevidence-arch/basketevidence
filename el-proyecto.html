@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>El proyecto — BasketEvidence</title>
+    <meta name="description" content="BasketEvidence traduce la investigación científica en baloncesto a un lenguaje claro y aplicable para entrenadores y staff técnico.">
+    <link rel="canonical" href="https://basketevidence.com/el-proyecto.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+:root {
+    --bg: #F5F4EF;
+    --white: #fff;
+    --blue: #2E5077;
+    --blue-dark: #1E3550;
+    --border: #D4D2C8;
+    --text: #0A0A0A;
+    --text2: #4A4A4A;
+    --header-height: 64px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 17px; scroll-behavior: smooth; }
+body {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg);
+    padding-top: var(--header-height);
+    -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -.015em;
+}
+a { color: var(--blue); text-decoration: none; }
+a:hover { color: var(--blue-dark); }
+
+/* HEADER */
+header {
+    position: fixed; top: 0; left: 0; right: 0;
+    height: var(--header-height);
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+}
+.header-inner {
+    max-width: 1200px; margin: 0 auto; padding: 0 2rem;
+    height: 100%; display: flex; align-items: center; justify-content: space-between;
+}
+.logo {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.2rem; font-weight: 700;
+    color: var(--text); text-decoration: none;
+}
+.logo:hover { color: var(--blue); }
+nav ul { display: flex; gap: 2rem; list-style: none; }
+nav a { color: var(--text2); font-size: .9375rem; font-weight: 500; text-decoration: none; }
+nav a:hover { color: var(--blue); }
+@media(max-width:767px){ nav ul { display: none; } }
+
+/* LAYOUT */
+.container { max-width: 680px; margin: 0 auto; padding: 0 2rem; }
+
+/* HERO */
+.hero {
+    padding: 3.5rem 0 3rem;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+.hero h1 { font-size: 2.5rem; }
+@media(max-width:767px){ .hero h1 { font-size: 1.875rem; } }
+
+/* SECCIONES */
+.section {
+    padding: 3rem 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+.section:last-of-type { border-bottom: none; }
+.section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+    color: var(--text);
+}
+.section p {
+    font-size: 1rem;
+    color: var(--text2);
+    margin-bottom: 1rem;
+    line-height: 1.75;
+}
+.section p:last-child { margin-bottom: 0; }
+
+/* HIGHLIGHT */
+.highlight {
+    border-left: 3px solid var(--blue);
+    background: #EEF4FF;
+    padding: .875rem 1.125rem;
+    border-radius: 0 6px 6px 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.65;
+    margin: 1.5rem 0;
+}
+
+/* PERFIL */
+.profile {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1.25rem;
+}
+.profile-name {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: .25rem;
+}
+.profile-role {
+    font-size: .9375rem;
+    color: var(--blue);
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+}
+.credentials {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.credential {
+    font-size: .9375rem;
+    color: var(--text2);
+    padding-left: 1.1rem;
+    position: relative;
+    line-height: 1.5;
+}
+.credential::before {
+    content: '';
+    position: absolute;
+    left: 0; top: .55em;
+    width: 5px; height: 5px;
+    background: var(--blue);
+    border-radius: 50%;
+}
+
+/* ESTRUCTURA */
+.structure-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .875rem;
+    margin-top: 1.25rem;
+}
+@media(max-width:600px){ .structure-grid { grid-template-columns: 1fr; } }
+.structure-item {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: .875rem 1rem;
+}
+.structure-item h3 {
+    font-family: Inter, sans-serif;
+    font-size: .875rem;
+    font-weight: 600;
+    color: var(--blue);
+    margin-bottom: .25rem;
+    letter-spacing: 0;
+}
+.structure-item p {
+    font-size: .875rem;
+    color: var(--text2);
+    margin: 0;
+    line-height: 1.55;
+}
+
+/* CIERRE */
+.closing {
+    padding: 3rem 0;
+    background: var(--bg);
+}
+.closing p {
+    font-size: 1rem;
+    color: var(--text2);
+    margin-bottom: .875rem;
+    line-height: 1.75;
+}
+.closing p:last-child {
+    font-size: 1.0625rem;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 0;
+}
+
+/* FOOTER */
+.footer { background: var(--text); color: var(--white); padding: 2.5rem 0 1.5rem; }
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
+    gap: 2rem; margin-bottom: 2rem;
+}
+.footer h4 {
+    font-family: Inter, sans-serif;
+    font-size: .75rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .06em;
+    color: rgba(255,255,255,.5); margin-bottom: .875rem;
+}
+.footer p { font-size: .9rem; color: rgba(255,255,255,.65); line-height: 1.6; }
+.footer ul { list-style: none; }
+.footer li { margin-bottom: .4rem; }
+.footer a { color: rgba(255,255,255,.7); font-size: .9375rem; }
+.footer a:hover { color: #fff; }
+.footer-bottom {
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,.1);
+    text-align: center;
+    font-size: .8125rem;
+    color: rgba(255,255,255,.4);
+}
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <a href="index.html" class="logo">BasketEvidence</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="el-proyecto.html">El proyecto</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>El proyecto</h1>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <p>BasketEvidence traduce investigación científica sobre baloncesto a un lenguaje claro y aplicable para entrenadores, preparadores físicos y staff técnico.</p>
+        <p>En baloncesto se habla mucho desde la experiencia y la intuición. Eso tiene valor. Pero muchas veces falta una capa más: mirar el juego desde la evidencia. No para sustituir al entrenador, sino para darle más herramientas.</p>
+        <div class="highlight">Un estudio por semana. Sin jerga innecesaria. De la investigación a la pista.</div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Quién está detrás</h2>
+        <div class="profile">
+            <p class="profile-name">Álvaro García Tomás</p>
+            <p class="profile-role">Editor de BasketEvidence</p>
+            <div class="credentials">
+                <span class="credential">Licenciado en Ciencias de la Actividad Física y del Deporte</span>
+                <span class="credential">Máster en Alto Rendimiento y Salud</span>
+                <span class="credential">Doctorando en Ciencias del Deporte</span>
+                <span class="credential">Entrenador Superior de Baloncesto</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Cómo está estructurado cada artículo</h2>
+        <p>Cada análisis sigue la misma estructura para que puedas ir directo a lo que necesitas.</p>
+        <div class="structure-grid">
+            <div class="structure-item">
+                <h3>Idea clave</h3>
+                <p>Una frase. El mensaje central sin rodeos.</p>
+            </div>
+            <div class="structure-item">
+                <h3>En 20 segundos</h3>
+                <p>Quién, qué estudiaron y qué encontraron.</p>
+            </div>
+            <div class="structure-item">
+                <h3>Por qué importa</h3>
+                <p>Por qué merece atención para el trabajo en cancha.</p>
+            </div>
+            <div class="structure-item">
+                <h3>Te lo contamos</h3>
+                <p>Resultados con detalle. Números cuando aportan.</p>
+            </div>
+            <div class="structure-item">
+                <h3>Qué muestra / qué no</h3>
+                <p>Lo que los datos demuestran y sus límites reales.</p>
+            </div>
+            <div class="structure-item">
+                <h3>Conclusiones</h3>
+                <p>Lectura práctica para el staff. Con implicación concreta.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="closing">
+    <div class="container">
+        <p>La evidencia no sustituye al entrenador. No elimina la experiencia. No da respuestas automáticas.</p>
+        <p>Pero puede ayudar a hacer mejores preguntas y tomar decisiones con más criterio.</p>
+        <p>BasketEvidence es ciencia aplicada al baloncesto, sin ruido y con vocación de pista.</p>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4>BasketEvidence</h4>
+                <p>Investigación científica en baloncesto, traducida y aplicada.</p>
+            </div>
+            <div>
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="el-proyecto.html">El proyecto</a></li>
+                    <li><a href="newsletter.html">Newsletter</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="aviso-legal.html">Aviso legal</a></li>
+                    <li><a href="privacidad.html">Privacidad</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 BasketEvidence · <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a> · <a href="cookies.html">Cookies</a></p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

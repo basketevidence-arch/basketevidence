@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>BasketEvidence — Investigación científica aplicada al baloncesto</title>
+    <meta name="description" content="Investigación científica aplicada al baloncesto. Artículos para entrenadores, preparadores físicos y staff técnico. De la evidencia a la pista.">
+    <link rel="canonical" href="https://basketevidence.com/">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="baloncesto ciencia, evidencia científica baloncesto, entrenamiento baloncesto, investigación baloncesto, preparación física baloncesto, coaching baloncesto">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="BasketEvidence — Investigación científica aplicada al baloncesto">
+    <meta property="og:description" content="Baloncesto basado en ciencia. Divulgación basada en investigación científica.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://basketevidence.com">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BasketEvidence — Investigación científica aplicada al baloncesto">
+    <meta name="twitter:description" content="Baloncesto basado en ciencia. Divulgación basada en investigación científica.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+:root {
+    --bg-cream: #F5F4EF;
+    --text-primary: #0A0A0A;
+    --text-secondary: #4A4A4A;
+    --text-tertiary: #6B6B6B;
+    --accent-blue: #2E5077;
+    --accent-blue-dark: #1E3550;
+    --border-subtle: #D4D2C8;
+    --white: #FFF;
+    --black: #1A1A1A;
+    --header-height: 64px;
+    
+    /* Colores por categoría */
+    --cat-tactica: #2E5077;
+    --cat-fisiologia: #C84C4C;
+    --cat-analitica: #4C7C84;
+    --cat-cognicion: #8B6C4C;
+    --cat-motor: #6C4C7C;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 18px;
+}
+
+body {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+    background-color: var(--bg-cream);
+    -webkit-font-smoothing: antialiased;
+    padding-top: var(--header-height);
+}
+
+body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+body.overlay-open {
+    overflow: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+}
+
+h1 {
+    font-size: 2.75rem;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 3rem 0 1.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 2.5rem 0 1rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+    margin: 2rem 0 0.75rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    max-width: 65ch;
+}
+
+ul {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.75rem;
+    max-width: 60ch;
+}
+
+a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--accent-blue);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ============================================
+   HEADER
+============================================ */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    background: var(--white);
+    border-bottom: 1px solid var(--border-subtle);
+    z-index: 1000;
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+}
+
+.logo:hover {
+    color: var(--accent-blue);
+}
+
+.nav-desktop {
+    display: none;
+}
+
+.nav-desktop ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+}
+
+.nav-desktop a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.nav-desktop a:hover {
+    color: var(--accent-blue);
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text-primary);
+    transition: all 0.3s;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--white);
+    transform: translateX(100%);
+    transition: transform 0.3s;
+    z-index: 999;
+    overflow-y: auto;
+    padding: 2rem;
+}
+
+.mobile-menu.open {
+    transform: translateX(0);
+}
+
+.mobile-menu ul {
+    list-style: none;
+    margin: 0;
+}
+
+.mobile-menu li {
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 1.25rem 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* ============================================
+   HERO SECTION
+============================================ */
+.hero {
+    padding: 4rem 0 3rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    max-width: 50ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1.75rem;
+    background: var(--accent-blue);
+    color: var(--white);
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+}
+
+.hero-cta:hover {
+    background: var(--accent-blue-dark);
+    color: var(--white);
+}
+
+/* ============================================
+   POR QUÉ BASKETEVIDENCE
+============================================ */
+.why-section {
+    padding: 4rem 0;
+    background: var(--white);
+}
+
+.why-content {
+    max-width: 75ch;
+    margin: 0 auto;
+}
+
+.why-text {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.why-text:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   ARTÍCULO DE LA SEMANA
+============================================ */
+.featured-article-section {
+    padding: 3rem 0 4rem;
+    background: #F0F4F8;
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.featured-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-blue);
+    margin-bottom: 1.5rem;
+}
+
+.featured-article {
+    background: var(--white);
+    border: 2px solid var(--accent-blue);
+    border-radius: 8px;
+    padding: 3rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(46, 80, 119, 0.08);
+}
+
+.featured-article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(46, 80, 119, 0.15);
+    border-color: var(--accent-blue-dark);
+}
+
+.featured-meta {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.featured-title {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 1rem;
+    color: var(--text-primary);
+}
+
+.featured-excerpt {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin: 0 0 1.5rem;
+    max-width: 70ch;
+}
+
+.featured-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.featured-read-more {
+    font-weight: 600;
+    color: var(--accent-blue);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: gap 0.2s;
+}
+
+.featured-article:hover .featured-read-more {
+    gap: 0.75rem;
+}
+
+/* ============================================
+   PREGUNTAS QUE RESPONDE LA EVIDENCIA
+============================================ */
+/* Lo más leído */
+.most-read-section {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.most-read-section .section-title {
+    text-align: left;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.most-read-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+/* Responsive */
+@media (max-width: 767px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .featured-article {
+        padding: 1.5rem 1rem;
+    }
+    
+    .featured-title {
+        font-size: 1.25rem;
+        line-height: 1.3;
+    }
+    
+    .featured-excerpt {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+    
+    .featured-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding-top: 1rem;
+    }
+    
+    .most-read-section .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-intro {
+        font-size: 0.95rem;
+    }
+    
+    .most-read-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* ============================================
+   SECCIÓN ARTÍCULOS
+============================================ */
+.articles-section {
+    padding: 4rem 0;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 1.75rem;
+    margin: 0;
+}
+
+.view-all {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--accent-blue);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.view-all:hover {
+    gap: 0.75rem;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.article-card {
+    background: var(--white);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.article-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-color: var(--accent-blue);
+}
+
+.article-meta {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.article-context {
+    font-size: 0.8125rem;
+    font-weight: 400;
+    color: #666;
+    letter-spacing: 0.01em;
+    line-height: 1.4;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.625rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+.badge-nivel {
+    background: var(--text-primary);
+    color: var(--white);
+}
+
+.badge-categoria {
+    background: var(--border-subtle);
+    color: var(--text-primary);
+}
+
+.badge-categoria.tactica { background: var(--cat-tactica); color: var(--white); }
+.badge-categoria.fisiologia { background: var(--cat-fisiologia); color: var(--white); }
+.badge-categoria.analitica { background: var(--cat-analitica); color: var(--white); }
+.badge-categoria.cognicion { background: var(--cat-cognicion); color: var(--white); }
+.badge-categoria.motor { background: var(--cat-motor); color: var(--white); }
+
+.badge-revista {
+    background: #E8F4F8;
+    color: #1E5A6E;
+    text-transform: none;
+}
+
+.badge-contexto {
+    background: #F0F4F8;
+    color: var(--accent-blue);
+}
+
+.badge-institucion {
+    background: #F5F4EF;
+    color: #6B5D4F;
+    text-transform: none;
+}
+
+.article-year {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+}
+
+.article-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.article-excerpt {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.article-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.read-time {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+}
+
+/* ============================================
+   NEWSLETTER SECTION
+============================================ */
+.newsletter-section {
+    padding: 4rem 0;
+    background: var(--accent-blue);
+    color: var(--white);
+}
+
+.newsletter-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.newsletter-content h2 {
+    color: var(--white);
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.newsletter-content p {
+    margin: 0 auto 2rem;
+    color: rgba(255,255,255,0.9);
+    max-width: 45ch;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 0.75rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-input {
+    flex: 1;
+    padding: 0.875rem 1.25rem;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 6px;
+    font-size: 1rem;
+    background: rgba(255,255,255,0.1);
+    color: var(--white);
+    transition: all 0.2s;
+}
+
+.newsletter-input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+.newsletter-input:focus {
+    outline: none;
+    border-color: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.15);
+}
+
+.newsletter-button {
+    padding: 0.875rem 1.75rem;
+    background: var(--white);
+    color: var(--accent-blue);
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.newsletter-button:hover {
+    background: var(--bg-cream);
+    transform: translateY(-1px);
+}
+
+/* ============================================
+   FOOTER
+============================================ */
+.footer {
+    background: var(--white);
+    border-top: 1px solid var(--border-subtle);
+    padding: 3rem 0 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    margin: 0;
+}
+
+.footer-section li {
+    margin-bottom: 0.625rem;
+}
+
+.footer-section a {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.footer-section a:hover {
+    color: var(--accent-blue);
+}
+
+.footer-about {
+    max-width: 300px;
+}
+
+.footer-about p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-subtle);
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin: 0;
+}
+
+/* ============================================
+   OVERLAY ARTÍCULO
+============================================ */
+.article-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--bg-cream);
+    z-index: 2000;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.3s;
+}
+
+.article-overlay.open {
+    transform: translateX(0);
+}
+
+.article-header {
+    position: sticky;
+    top: 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 1rem 0;
+    z-index: 10;
+}
+
+.article-header-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-article {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.close-article:hover {
+    color: var(--accent-blue);
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+}
+
+.breadcrumbs a {
+    color: var(--text-secondary);
+}
+
+.breadcrumbs a:hover {
+    color: var(--accent-blue);
+}
+
+.breadcrumb-separator {
+    color: var(--text-tertiary);
+}
+
+.article-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.article-title-full {
+    font-size: 2.25rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.article-metadata {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: 2rem;
+}
+
+.metadata-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.metadata-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-tertiary);
+    font-weight: 600;
+}
+
+.metadata-value {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.article-section {
+    margin-bottom: 3rem;
+}
+
+.article-section h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.article-section p {
+    white-space: pre-line;
+}
+
+.social-share {
+    display: flex;
+    gap: 0.75rem;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+    margin: 3rem 0;
+}
+
+.share-label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-right: 0.5rem;
+}
+
+.share-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    background: var(--white);
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.share-button:hover {
+    border-color: var(--accent-blue);
+    background: var(--accent-blue);
+    color: var(--white);
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+    
+    .nav-desktop {
+        display: block;
+    }
+    
+    .mobile-menu {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    
+    .newsletter-form {
+        flex-direction: row;
+    }
+    
+    .article-title-full {
+        font-size: 2.75rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .categories-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+    </style>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "BasketEvidence",
+      "url": "https://basketevidence.com",
+      "description": "Investigación científica aplicada al baloncesto. Artículos para entrenadores, preparadores físicos y staff técnico.",
+      "inLanguage": "es",
+      "publisher": {
+        "@type": "Person",
+        "name": "Álvaro García Tomás"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://basketevidence.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="header-inner">
+        <a href="#home" class="logo">BasketEvidence</a>
+        
+        <nav class="nav-desktop">
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="articulos.html">Artículos</a></li>
+                <li><a href="el-proyecto.html">El proyecto</a></li>
+                <li><a href="#newsletter">Newsletter</a></li>
+            </ul>
+        </nav>
+        
+        <button class="menu-toggle" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>
+
+<!-- MOBILE MENU -->
+<nav class="mobile-menu">
+    <ul>
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="articulos.html">Artículos</a></li>
+        <li><a href="el-proyecto.html">El proyecto</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+    </ul>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="container">
+        <h1>Investigación científica<br>aplicada al baloncesto</h1>
+        <p class="hero-subtitle">Baloncesto basado en ciencia. Divulgación basada en investigación científica.</p>
+        <a href="#newsletter" class="hero-cta">
+            <span>Recibe nuevos artículos</span>
+            <span>→</span>
+        </a>
+    </div>
+</section>
+
+<!-- ARTÍCULO DE LA SEMANA -->
+<section class="featured-article-section">
+    <div class="container">
+        <div class="featured-label">Artículo de la semana</div>
+        <div class="featured-article" id="featured-article">
+            <!-- Se genera dinámicamente -->
+        </div>
+    </div>
+</section>
+
+<!-- LO MÁS LEÍDO -->
+<section class="most-read-section">
+    <div class="container">
+        <h2 class="section-title">Lo más leído</h2>
+        <p class="section-intro">Los artículos que más interés están generando entre entrenadores y profesionales del baloncesto.</p>
+        
+        <div class="most-read-grid" id="most-read-articles">
+            <!-- Se genera dinámicamente -->
+        </div>
+    </div>
+</section>
+
+<!-- ÚLTIMOS ARTÍCULOS -->
+<section class="articles-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Últimos artículos</h2>
+            <a href="#articulos" class="view-all">
+                Ver todos
+                <span>→</span>
+            </a>
+        </div>
+        <div class="articles-grid" id="home-articles">
+            <!-- Se genera dinámicamente -->
+        </div>
+    </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-section" id="newsletter">
+    <div class="container">
+        <div class="newsletter-content">
+            <h2>No te pierdas nada</h2>
+            <p>Recibe nuevos artículos directamente en tu email. Sin spam, solo baloncesto y evidencia.</p>
+            <form action="https://basketevidence.us9.list-manage.com/subscribe/post?u=ac2038e8422153d1f97ec35fbb&amp;id=622b40d9c9&amp;f_id=002cd0e3f0" 
+                  method="post" 
+                  class="newsletter-form" 
+                  name="mc-embedded-subscribe-form"
+                  target="_blank">
+                <input 
+                    type="email" 
+                    name="EMAIL"
+                    class="newsletter-input" 
+                    placeholder="Tu email" 
+                    required
+                >
+                <!-- Honeypot anti-spam -->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                    <input type="text" name="b_ac2038e8422153d1f97ec35fbb_622b40d9c9" tabindex="-1" value="">
+                </div>
+                <button type="submit" class="newsletter-button">Suscribirme</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- PÁGINA TODOS LOS ARTÍCULOS -->
+<section class="articles-section" id="articulos" style="display:none; min-height: 80vh;">
+    <div class="container">
+        <h1>Todos los artículos</h1>
+        <div class="articles-grid" id="all-articles">
+            <!-- Se genera dinámicamente -->
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-section footer-about">
+                <h4>BasketEvidence</h4>
+                <p>Investigación científica en baloncesto, traducida y aplicada. De la evidencia a la pista.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="el-proyecto.html">El proyecto</a></li>
+                    <li><a href="newsletter.html">Newsletter</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="aviso-legal.html">Aviso legal</a></li>
+                    <li><a href="privacidad.html">Privacidad</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 BasketEvidence · <a href="aviso-legal.html" style="color:rgba(255,255,255,.5)">Aviso legal</a> · <a href="privacidad.html" style="color:rgba(255,255,255,.5)">Privacidad</a> · <a href="cookies.html" style="color:rgba(255,255,255,.5)">Cookies</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- OVERLAY ARTÍCULO -->
+<div class="article-overlay" id="article-overlay">
+    <div class="article-header">
+        <div class="article-header-inner">
+            <div class="breadcrumbs" id="breadcrumbs">
+                <!-- Se genera dinámicamente -->
+            </div>
+            <button class="close-article" id="close-article">
+                <span>✕</span>
+                <span>Cerrar</span>
+            </button>
+        </div>
+    </div>
+    
+    <div class="article-content" id="article-detail">
+        <!-- Se genera dinámicamente -->
+    </div>
+</div>
+
+<script>
+// ============================================
+// DATOS
+// ============================================
+const ARTICLES_DATA = [
+  {
+    "id": 16,
+    "destacado": true,
+    "mas_leido": true,
+    "title": "Diferencias en las exigencias físicas entre los cuartos de juego y las posiciones en jugadores profesionales",
+    "nivel": "R3",
+    "year": "2020",
+    "contexto": "LEB Oro",
+    "institucion": "FC Barcelona",
+    "revista": "Journal of Sports Science & Medicine",
+    "tipo": "Observacional cuantitativo (análisis de carga externa en competición)",
+    "categoria": "Fisiología",
+    "excerpt": "Cuando la carga física desciende durante el partido, no siempre significa que el jugador esté más fatigado: muchas veces significa que el juego ha cambiado.",
+    "sections": {
+      "idea_clave": "Cuando la carga física desciende durante el partido, no siempre significa que el jugador esté más fatigado: muchas veces significa que el juego ha cambiado.",
+      "en_20": "La carga externa disminuye progresivamente del primer al cuarto cuarto.\nEl descenso se observa en variables como distancia recorrida, aceleraciones y player load.\nEste descenso es mayor en cuartos con más interrupciones (2.º y 4.º).\nEl cambio no se explica solo por fatiga fisiológica.\nEl contexto del juego modifica la forma en la que se expresa la intensidad.",
+      "por_que": "En baloncesto solemos interpretar la carga física como un reflejo directo del esfuerzo del jugador. Más carga equivale a más exigencia; menos carga, a fatiga o pérdida de rendimiento.\nEl problema es que esta lectura ignora una cuestión clave: el baloncesto no es un esfuerzo continuo, sino un deporte profundamente condicionado por el contexto competitivo. El ritmo, las pausas, la importancia de cada posesión y la toma de decisiones cambian a lo largo del partido.\nEntender cómo y por qué se modifica la carga física es fundamental para no confundir cómo se juega con cuánto se corre.",
+      "contexto": "A medida que avanza un partido de baloncesto, se producen cambios estructurales evidentes: Más interrupciones por faltas, tiempos muertos y revisiones. Mayor control del ritmo por parte de los equipos. Posesiones más largas y más planificadas. Reducción de situaciones abiertas de transición.\nEstos elementos afectan directamente a la carga externa registrada por sistemas de seguimiento, independientemente del estado físico real del jugador.",
+      "te_lo_contamos": "Los autores analizaron 17 partidos oficiales de una temporada completa, monitorizando a 13 jugadores profesionales en todos los encuentros como locales.\nCada acción fue registrada mediante un sistema WIMU PRO™, que combina sensores inerciales (acelerómetros, giroscopios) y un sistema de posicionamiento local (LPS), válido y fiable en entornos indoor.\nSe compararon dos cosas: 1) Diferencias entre cuartos (1º, 2º, 3º y 4º), y 2) Diferencias entre posiciones (guards, forwards, centers).\nLas variables clave fueron: Distancia total recorrida, Player Load, Aceleraciones y desaceleraciones de alta intensidad, Velocidad pico, Saltos, e Impactos. Todo ajustado al tiempo real en pista, no al tiempo efectivo de juego, lo que cambia radicalmente la interpretación.\nEl patrón es claro: El primer cuarto concentra las mayores demandas físicas. Del primer al cuarto cuarto hay descensos grandes en distancia total, player load, aceleraciones y desaceleraciones.\nPero aquí está lo interesante: El descenso no se explica solo por fatiga. Los autores muestran que los cuartos con más interrupciones (2º y 4º) presentan menor relación trabajo-descanso, más pausas, más juego estático, y menos continuidad de acciones intensas. Es decir: el juego cambia, no solo el jugador.\nRespecto a las posiciones:\n– Guards: Más distancia recorrida y más aceleraciones/desaceleraciones (perfil de alta intermitencia).\n– Centers: Menos distancia total pero mayor velocidad pico, más saltos e impactos (demandas concentradas y explosivas).\n– Forwards: Perfil intermedio.\nLo importante no es solo la fatiga: cambia el juego. Cuando vemos que la carga física desciende del primer al cuarto cuarto, la explicación automática suele ser fatiga. Pero los datos muestran que esa explicación es incompleta. El descenso no se explica solo por fatiga fisiológica, sino por cómo se transforma el propio juego a lo largo del partido.\nLos cuartos con más interrupciones presentan un patrón distinto: Hay más pausas (tiros libres, tiempos muertos, revisiones), la relación trabajo–descanso es menor, aumenta el juego estático y organizado, y disminuye la continuidad de acciones intensas. Esto provoca que, aunque el jugador siga compitiendo y tomando decisiones importantes, la demanda física medida descienda.\nNo es solo que el jugador se canse. Es que el partido se juega de otra manera. Menor carga física no significa menor exigencia competitiva. Significa que el esfuerzo se redistribuye, el ritmo cambia, y el tipo de demanda ya no es la misma.",
+      "que_muestra": "La carga externa desciende conforme avanza el partido.\nEl descenso es mayor en cuartos con más interrupciones.\nLas variables físicas no reflejan por sí solas la exigencia competitiva.\nEl contexto del juego modula la expresión física del rendimiento.",
+      "que_no": "No permiten aislar con precisión la fatiga fisiológica real.\nNo miden la carga cognitiva ni la presión decisional.\nNo establecen una relación directa entre menor carga y peor rendimiento.\nNo diferencian entre jugadores según rol táctico específico.",
+      "conclusiones": "Los datos muestran que la carga física disminuye a medida que avanza el partido, pero interpretar este fenómeno exclusivamente como fatiga sería una simplificación excesiva.\nEl baloncesto competitivo no se desarrolla de forma lineal. A lo largo del partido cambian el ritmo, las interrupciones, la duración de las posesiones y el peso táctico de cada acción. La exigencia física medida puede descender, pero la exigencia del juego no desaparece: se transforma.\nEn los momentos finales, el esfuerzo ya no se expresa tanto en metros recorridos o en acumulación de aceleraciones, sino en la capacidad para ejecutar acciones más cortas, más precisas y con mayor impacto táctico y decisional. El jugador corre menos, pero cada acción importa más.\nEl baloncesto no baja de intensidad: cambia de forma. Comprender esa transformación es clave para analizar correctamente el rendimiento y evitar confundir descenso de carga con pérdida de nivel competitivo.",
+      "que_no_dice": "No afirma que la fatiga no exista.\nNo sugiere ignorar los datos de carga externa.\nNo propone eliminar monitorización física.\nNo niega la utilidad de sistemas de seguimiento.",
+      "como_leer": "Este artículo no debe leerse como una crítica a la monitorización de carga, sino como una llamada a interpretar esos datos dentro de su contexto competitivo.\nLos sistemas de seguimiento son herramientas valiosas, pero los números que generan requieren interpretación. Menor carga física no equivale automáticamente a menor rendimiento, ni mayor carga garantiza mejor juego.\nPara entrenadores y preparadores físicos, el mensaje es claro: los datos de carga son útiles cuando se leen junto con el contexto del partido. Sin esa lectura conjunta, el riesgo es entrenar realidades que no se parecen a la competición.",
+      "fuente": "Estudio observacional publicado en Journal of Sports Science & Medicine (2020) sobre la evolución de la carga externa a lo largo del partido en baloncesto competitivo.\nCada artículo indica su nivel de evidencia y sus límites de aplicación."
+    }
+  },
+  {
+    "id": 14,
+    "destacado": false,
+    "mas_leido": true,
+    "title": "Euroleague vs NCAA: Comparación del lanzamiento de tres",
+    "nivel": "R3",
+    "year": "2025",
+    "contexto": "Euroleague / NCAA",
+    "institucion": "Aristotle University",
+    "revista": "J Human Sport Exercise",
+    "tipo": "Observacional comparativo",
+    "categoria": "Táctica",
+    "excerpt": "No es solo cuánto se tira de tres, sino cuándo, quién y desde qué contexto ofensivo.",
+    "sections": {
+      "idea_clave": "Timing y contexto importan más que volumen.",
+      "en_20": "Euroleague: más eficaz. NCAA: más volumen temprano.",
+      "por_que": "El triple es determinante pero el análisis por porcentaje es incompleto.",
+      "contexto": "Euroleague y NCAA tienen ecosistemas distintos.",
+      "te_lo_contamos": "Análisis de 3.249 tiros en 70 partidos. Modelo CHAID identifica timing como factor clave.",
+      "que_muestra": "Triple europeo más integrado en estructura ofensiva.",
+      "que_no": "No evalúa calidad del defensor.",
+      "conclusiones": "Dos lógicas ofensivas distintas.",
+      "que_no_dice": "No afirma superioridad de estilo.",
+      "como_leer": "Contexto modula eficacia.",
+      "fuente": "Karamousalidis et al. (2025). Journal of Human Sport and Exercise."
+    }
+  },
+  {
+    "id": 1,
+    "destacado": false,
+    "mas_leido": true,
+    "title": "American Academy Sleep Medicine: dormir más se asocia con mejor precisión tiro, sprint y reacción",
+    "nivel": "R3",
+    "year": "2010",
+    "revista": "Journal of Clinical Sleep Medicine",
+    "tipo": "Observacional longitudinal",
+    "categoria": "Analítica",
+    "excerpt": "Dormir más no crea rendimiento nuevo, reduce margen de error.",
+    "sections": {
+      "idea_clave": "Sueño reduce margen error, no crea capacidades nuevas.",
+      "en_20": "Más sueño asociado con mejoras en tiro y sprint.",
+      "por_que": "Factores no visibles condicionan rendimiento.",
+      "contexto": "Jugadores universitarios aumentan tiempo sueño.",
+      "te_lo_contamos": "Mejoras sin cambiar entrenamiento.",
+      "que_muestra": "Asociación clara sueño-mejoras.",
+      "que_no": "No demuestra causalidad directa.",
+      "conclusiones": "Sueño modula expresión de lo entrenado.",
+      "que_no_dice": "No afirma mal partido = mala noche.",
+      "como_leer": "Contextual, no causa única.",
+      "fuente": "AASM (2010). J Clinical Sleep Medicine."
+    }
+  }
+];
+// ============================================
+// LÓGICA
+// ============================================
+
+// Ordenar artículos
+const sortedArticles = [...ARTICLES_DATA].sort((a,b) => b.id - a.id);
+
+// Calcular tiempo de lectura
+function calculateReadTime(sections) {
+    const text = Object.values(sections).join(' ');
+    const words = text.split(/\s+/).length;
+    const minutes = Math.ceil(words / 200);
+    return minutes;
+}
+
+// Formatear categoría para clase CSS
+function formatCategoryClass(cat) {
+    const map = {
+        'Táctica': 'tactica',
+        'Fisiología': 'fisiologia',
+        'Analítica': 'analitica',
+        'Cognición': 'cognicion',
+        'Control Motor': 'motor'
+    };
+    return map[cat] || '';
+}
+
+// Renderizar card de artículo
+function renderArticleCard(art) {
+    let badges = '';
+    if (art.revista)     badges += `<span class="badge badge-revista">${art.revista}</span>`;
+    if (art.contexto)    badges += `<span class="badge badge-contexto">${art.contexto}</span>`;
+    if (art.institucion) badges += `<span class="badge badge-institucion">${art.institucion}</span>`;
+    return `
+        <div class="article-card" onclick="openArticle(${art.id})">
+            ${badges ? `<div class="article-meta">${badges}</div>` : ''}
+            <h3 class="article-title">${art.title}</h3>
+            <p class="article-excerpt">${art.excerpt}</p>
+        </div>
+    `;
+}
+
+// Renderizar artículo destacado de la semana
+function renderFeaturedArticle() {
+    // Usar el marcado como destacado; si no hay ninguno, el más reciente
+    const featured = sortedArticles.find(a => a.destacado === true) || sortedArticles[0];
+    if (!featured) return;
+    
+    document.getElementById('featured-article').innerHTML = `
+        <div class="featured-meta">
+            ${featured.revista ? `<span class="badge badge-revista">${featured.revista}</span>` : ''}
+            ${featured.contexto ? `<span class="badge badge-contexto">${featured.contexto}</span>` : ''}
+            ${featured.institucion ? `<span class="badge badge-institucion">${featured.institucion}</span>` : ''}
+        </div>
+        <h2 class="featured-title">${featured.title}</h2>
+        <p class="featured-excerpt">${featured.excerpt}</p>
+        <div class="featured-footer">
+            <span class="featured-read-more">Leer artículo →</span>
+        </div>
+    `;
+    
+    // Hacer clickeable
+    document.getElementById('featured-article').onclick = () => openArticle(featured.id);
+}
+
+// Renderizar home
+function renderHomeArticles() {
+    document.getElementById('home-articles').innerHTML = 
+        sortedArticles.slice(0,6).map(renderArticleCard).join('');
+}
+
+// Renderizar lo más leído
+function renderMostRead() {
+    // Usar los marcados como mas_leido:true; si hay menos de 3, completar con los más recientes
+    let mostRead = sortedArticles.filter(a => a.mas_leido === true);
+    if (mostRead.length < 3) {
+        const ids = mostRead.map(a => a.id);
+        const extra = sortedArticles.filter(a => !ids.includes(a.id));
+        mostRead = [...mostRead, ...extra].slice(0, 3);
+    }
+    mostRead = mostRead.slice(0, 3);
+    document.getElementById('most-read-articles').innerHTML = 
+        mostRead.map(renderArticleCard).join('');
+}
+
+// Renderizar todos
+function renderAllArticles() {
+    document.getElementById('all-articles').innerHTML = 
+        sortedArticles.map(renderArticleCard).join('');
+}
+
+// Renderizar categorías
+// Formatear sección con saltos de línea
+function formatSection(text) {
+    return text.split('\n').map(p => `<p>${p}</p>`).join('');
+}
+
+// Abrir artículo
+function openArticle(id) {
+    const art = ARTICLES_DATA.find(a => a.id === id);
+    if (!art) return;
+    
+    const s = art.sections;
+    const readTime = calculateReadTime(s);
+    const catClass = formatCategoryClass(art.categoria);
+    
+    // Breadcrumbs
+    document.getElementById('breadcrumbs').innerHTML = `
+        <a href="#" onclick="closeArticle(); return false;">Inicio</a>
+        <span class="breadcrumb-separator">›</span>
+        <a href="#articulos" onclick="closeArticle(); showAllArticles(); return false;">Artículos</a>
+        <span class="breadcrumb-separator">›</span>
+        <span>${art.categoria}</span>
+    `;
+    
+    // Contenido
+    document.getElementById('article-detail').innerHTML = `
+        <h1 class="article-title-full">${art.title}</h1>
+        
+        <div class="article-metadata">
+            ${art.revista ? `<div class="metadata-item"><span class="metadata-label">Revista</span><span class="metadata-value">${art.revista}</span></div>` : ''}
+            ${art.year ? `<div class="metadata-item"><span class="metadata-label">Año</span><span class="metadata-value">${art.year}</span></div>` : ''}
+            ${art.tipo ? `<div class="metadata-item"><span class="metadata-label">Tipo</span><span class="metadata-value">${art.tipo}</span></div>` : ''}
+            ${art.contexto ? `<div class="metadata-item"><span class="metadata-label">Contexto</span><span class="metadata-value">${art.contexto}</span></div>` : ''}
+            ${art.institucion ? `<div class="metadata-item"><span class="metadata-label">Institución</span><span class="metadata-value">${art.institucion}</span></div>` : ''}
+            <div class="metadata-item"><span class="metadata-label">Lectura</span><span class="metadata-value">~${readTime} min</span></div>
+        </div>
+        
+        ${s.idea_clave ? `<div class="article-section"><h2>💡 Idea clave</h2>${formatSection(s.idea_clave)}</div>` : ''}
+        ${s.en_20 ? `<div class="article-section"><h2>⏱ En 20 segundos</h2>${formatSection(s.en_20)}</div>` : ''}
+        ${s.por_que ? `<div class="article-section"><h2>🎯 Por qué importa esto</h2>${formatSection(s.por_que)}</div>` : ''}
+        ${s.contexto ? `<div class="article-section"><h2>🌍 Contexto</h2>${formatSection(s.contexto)}</div>` : ''}
+        ${s.te_lo_contamos ? `<div class="article-section"><h2>📖 Te lo contamos</h2>${formatSection(s.te_lo_contamos)}</div>` : ''}
+        ${s.que_muestra ? `<div class="article-section"><h2>✅ Qué muestra realmente el análisis</h2>${formatSection(s.que_muestra)}</div>` : ''}
+        ${s.que_no ? `<div class="article-section"><h2>❌ Qué NO muestra el análisis</h2>${formatSection(s.que_no)}</div>` : ''}
+        ${s.conclusiones ? `<div class="article-section"><h2>🎓 Conclusiones</h2>${formatSection(s.conclusiones)}</div>` : ''}
+        
+        <div class="social-share">
+            <span class="share-label">Compartir:</span>
+            <button class="share-button" onclick="shareTwitter(${art.id})">
+                <span>𝕏</span>
+                <span>Twitter</span>
+            </button>
+            <button class="share-button" onclick="shareLinkedIn(${art.id})">
+                <span>in</span>
+                <span>LinkedIn</span>
+            </button>
+            <button class="share-button" onclick="shareWhatsApp(${art.id})">
+                <span>WhatsApp</span>
+            </button>
+        </div>
+        
+        ${s.que_no_dice ? `<div class="article-section"><h2>⚠️ Qué NO dice el artículo</h2>${formatSection(s.que_no_dice)}</div>` : ''}
+        ${s.como_leer ? `<div class="article-section"><h2>👀 Cómo leer este artículo</h2>${formatSection(s.como_leer)}</div>` : ''}
+        ${s.fuente ? `<div class="article-section"><h2>📚 Fuente</h2>${formatSection(s.fuente)}</div>` : ''}
+        
+        <div class="newsletter-section" style="margin-top: 4rem; border-radius: 8px;">
+            <div class="newsletter-content">
+                <h2>¿Quieres más artículos así?</h2>
+                <p>Suscríbete y recibe nuevos análisis cada semana</p>
+                <form action="https://basketevidence.us9.list-manage.com/subscribe/post?u=ac2038e8422153d1f97ec35fbb&amp;id=622b40d9c9&amp;f_id=002cd0e3f0" 
+                      method="post" 
+                      class="newsletter-form"
+                      name="mc-embedded-subscribe-form"
+                      target="_blank">
+                    <input type="email" name="EMAIL" class="newsletter-input" placeholder="Tu email" required>
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                        <input type="text" name="b_ac2038e8422153d1f97ec35fbb_622b40d9c9" tabindex="-1" value="">
+                    </div>
+                    <button type="submit" class="newsletter-button">Suscribirme</button>
+                </form>
+            </div>
+        </div>
+    `;
+    
+    // Actualizar título de página para historial y compartir
+    document.title = art.title + ' — BasketEvidence';
+
+    // Schema.org Article dinámico
+    let schema = document.getElementById('article-schema');
+    if (!schema) {
+        schema = document.createElement('script');
+        schema.id = 'article-schema';
+        schema.type = 'application/ld+json';
+        document.head.appendChild(schema);
+    }
+    schema.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": art.title,
+        "description": art.excerpt,
+        "author": { "@type": "Person", "name": "Álvaro García Tomás" },
+        "publisher": { "@type": "Organization", "name": "BasketEvidence", "url": "https://basketevidence.com" },
+        "inLanguage": "es-ES",
+        "url": "https://basketevidence.com/"
+    });
+
+    // Abrir overlay
+    document.getElementById('article-overlay').classList.add('open');
+    document.body.classList.add('overlay-open');
+    window.scrollTo(0, 0);
+}
+
+// Cerrar artículo
+function closeArticle() {
+    document.getElementById('article-overlay').classList.remove('open');
+    document.body.classList.remove('overlay-open');
+    document.title = 'BasketEvidence — Investigación científica aplicada al baloncesto';
+}
+
+// Sharing functions
+function shareTwitter(id) {
+    const art = ARTICLES_DATA.find(a => a.id === id);
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent(art.title + ' | BasketEvidence');
+    window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+}
+
+function shareLinkedIn(id) {
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+}
+
+function shareWhatsApp(id) {
+    const art = ARTICLES_DATA.find(a => a.id === id);
+    const text = encodeURIComponent(art.title + ' | BasketEvidence - ' + window.location.href);
+    window.open(`https://wa.me/?text=${text}`, '_blank');
+}
+
+// Filtrar por categoría
+function filterByCategory(cat) {
+    showAllArticles();
+    // TODO: implementar filtrado visual
+}
+
+// Mostrar sección todos los artículos
+function showAllArticles() {
+    const home = document.getElementById('home-sections');
+    const all  = document.getElementById('articulos');
+    if (home) home.style.display = 'none';
+    // ocultar secciones home individualmente
+    ['featured-article-section','most-read-section','articles-section-home','newsletter-section-home'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+    });
+    document.querySelector('.hero').style.display = 'none';
+    document.querySelector('.featured-article-section').style.display = 'none';
+    document.querySelector('.most-read-section').style.display = 'none';
+    document.querySelector('.articles-section:not(#articulos)').style.display = 'none';
+    document.querySelector('.newsletter-section').style.display = 'none';
+    all.style.display = 'block';
+    window.scrollTo(0, 0);
+}
+
+// Mostrar home
+function showHome() {
+    document.querySelector('.hero').style.display = '';
+    document.querySelector('.featured-article-section').style.display = '';
+    document.querySelector('.most-read-section').style.display = '';
+    document.querySelector('.articles-section:not(#articulos)').style.display = '';
+    document.querySelector('.newsletter-section').style.display = '';
+    document.getElementById('articulos').style.display = 'none';
+    window.scrollTo(0, 0);
+}
+
+// Menu mobile
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.querySelector('.mobile-menu').classList.toggle('open');
+    document.body.classList.toggle('menu-open');
+});
+
+// Cerrar menú al hacer click en link
+document.querySelectorAll('.mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.menu-toggle').classList.remove('active');
+        document.querySelector('.mobile-menu').classList.remove('open');
+        document.body.classList.remove('menu-open');
+    });
+});
+
+// Navegación
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#articulos') {
+            e.preventDefault();
+            showAllArticles();
+        } else if (href === '#home') {
+            e.preventDefault();
+            showHome();
+        }
+    });
+});
+
+// Newsletter forms — Mailchimp maneja el submit directamente (target="_blank")
+
+// Close overlay con tecla ESC
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeArticle();
+    }
+});
+
+// Cerrar overlay
+document.getElementById('close-article').addEventListener('click', closeArticle);
+
+// Inicializar
+renderFeaturedArticle();
+renderMostRead();
+renderHomeArticles();
+renderAllArticles();
+</script>
+
+
+<!-- BANNER COOKIES -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a1a2e;color:#e0e0e0;padding:1.25rem 2rem;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;border-top:3px solid #2E5077">
+    <p style="margin:0;font-size:.875rem;line-height:1.6;flex:1;min-width:220px">
+        Usamos cookies estrictamente necesarias para el funcionamiento del sitio. No utilizamos cookies de publicidad ni seguimiento.
+        <a href="cookies.html" style="color:#93b8d8;margin-left:.5rem">Más información</a>
+    </p>
+    <div style="display:flex;gap:.75rem;flex-shrink:0">
+        <button onclick="acceptCookies()" style="padding:.6rem 1.25rem;background:#2E5077;color:#fff;border:none;border-radius:6px;font-size:.875rem;font-weight:600;cursor:pointer;font-family:Inter,sans-serif">Aceptar</button>
+        <a href="cookies.html" style="padding:.6rem 1.25rem;border:1px solid rgba(255,255,255,.3);color:#e0e0e0;border-radius:6px;font-size:.875rem;font-weight:500;text-decoration:none;display:inline-flex;align-items:center">Ver política</a>
+    </div>
+</div>
+
+<script>
+// Cookie banner
+function acceptCookies() {
+    localStorage.setItem('be_cookie_consent', '1');
+    document.getElementById('cookie-banner').style.display = 'none';
+}
+window.addEventListener('DOMContentLoaded', function() {
+    if (!localStorage.getItem('be_cookie_consent')) {
+        document.getElementById('cookie-banner').style.display = 'flex';
+    }
+});
+</script>
+
+</body>
+</html>
