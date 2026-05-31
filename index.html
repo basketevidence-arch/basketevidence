@@ -1128,7 +1128,7 @@ a:hover {
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="el-proyecto.html">El proyecto</a></li>
-                    <li><a href="newsletter.html">Newsletter</a></li>
+                    <li><a href="glosario.html">Glosario</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </div>
@@ -1375,10 +1375,8 @@ function openArticle(id) {
         <div class="article-metadata">
             ${art.revista ? `<div class="metadata-item"><span class="metadata-label">Revista</span><span class="metadata-value">${art.revista}</span></div>` : ''}
             ${art.year ? `<div class="metadata-item"><span class="metadata-label">Año</span><span class="metadata-value">${art.year}</span></div>` : ''}
-            ${art.tipo ? `<div class="metadata-item"><span class="metadata-label">Tipo</span><span class="metadata-value">${art.tipo}</span></div>` : ''}
             ${art.contexto ? `<div class="metadata-item"><span class="metadata-label">Contexto</span><span class="metadata-value">${art.contexto}</span></div>` : ''}
             ${art.institucion ? `<div class="metadata-item"><span class="metadata-label">Institución</span><span class="metadata-value">${art.institucion}</span></div>` : ''}
-            <div class="metadata-item"><span class="metadata-label">Lectura</span><span class="metadata-value">~${readTime} min</span></div>
         </div>
         
         ${s.idea_clave ? `<div class="article-section"><h2>💡 Idea clave</h2>${formatSection(s.idea_clave)}</div>` : ''}
@@ -1389,6 +1387,14 @@ function openArticle(id) {
         ${s.que_muestra ? `<div class="article-section"><h2>✅ Qué muestra realmente el análisis</h2>${formatSection(s.que_muestra)}</div>` : ''}
         ${s.que_no ? `<div class="article-section"><h2>❌ Qué NO muestra el análisis</h2>${formatSection(s.que_no)}</div>` : ''}
         ${s.conclusiones ? `<div class="article-section"><h2>🎓 Conclusiones</h2>${formatSection(s.conclusiones)}</div>` : ''}
+        
+        ${s.que_no_dice ? `<div class="article-section"><h2>⚠️ Qué NO dice el artículo</h2>${formatSection(s.que_no_dice)}</div>` : ''}
+        ${s.como_leer ? `<div class="article-section"><h2>👀 Cómo leer este artículo</h2>${formatSection(s.como_leer)}</div>` : ''}
+        ${s.fuente ? `<div class="article-section"><h2>📚 Fuente</h2>${formatSection(s.fuente)}</div>` : ''}
+        
+        <div class="glosario-link" style="margin-top:2.5rem;padding:1.25rem 1.5rem;background:#EEF4FF;border-left:3px solid #2E5077;border-radius:0 8px 8px 0;font-size:.95rem;color:#4A4A4A;line-height:1.6;">
+            ¿Algún término técnico que no te suene? Consulta el <a href="glosario.html" style="color:#2E5077;font-weight:600;">glosario →</a>
+        </div>
         
         <div class="social-share">
             <span class="share-label">Compartir:</span>
@@ -1404,10 +1410,6 @@ function openArticle(id) {
                 <span>WhatsApp</span>
             </button>
         </div>
-        
-        ${s.que_no_dice ? `<div class="article-section"><h2>⚠️ Qué NO dice el artículo</h2>${formatSection(s.que_no_dice)}</div>` : ''}
-        ${s.como_leer ? `<div class="article-section"><h2>👀 Cómo leer este artículo</h2>${formatSection(s.como_leer)}</div>` : ''}
-        ${s.fuente ? `<div class="article-section"><h2>📚 Fuente</h2>${formatSection(s.fuente)}</div>` : ''}
         
         <div class="newsletter-section" style="margin-top: 4rem; border-radius: 8px;">
             <div class="newsletter-content">

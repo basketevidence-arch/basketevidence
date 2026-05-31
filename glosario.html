@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Glosario — BasketEvidence</title>
+    <meta name="description" content="Glosario de términos de baloncesto, preparación física, análisis del juego y metodología científica, explicados de forma clara para entrenadores y staff técnico.">
+    <link rel="canonical" href="https://basketevidence.com/glosario.html">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Glosario — BasketEvidence">
+    <meta property="og:description" content="Términos de baloncesto y ciencia del deporte explicados sin jerga.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://basketevidence.com/glosario.html">
+    <meta property="og:locale" content="es_ES">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+:root {
+    --bg: #F5F4EF;
+    --white: #fff;
+    --blue: #2E5077;
+    --blue-dark: #1E3550;
+    --border: #D4D2C8;
+    --text: #0A0A0A;
+    --text2: #4A4A4A;
+    --text3: #6B6B6B;
+    --header-height: 64px;
+    --cat-tecnico: #2E5077;
+    --cat-fisico: #C4414B;
+    --cat-analisis: #2C8C99;
+    --cat-ciencia: #8B6F47;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 18px; scroll-behavior: smooth; }
+body {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--text);
+    background: var(--bg);
+    padding-top: var(--header-height);
+    -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 { font-family: 'Libre Baskerville', Georgia, serif; font-weight: 700; line-height: 1.25; letter-spacing: -.015em; }
+a { color: var(--blue); text-decoration: none; }
+a:hover { color: var(--blue-dark); }
+
+/* HEADER */
+header {
+    position: fixed; top: 0; left: 0; right: 0;
+    height: var(--header-height);
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+}
+.header-inner {
+    max-width: 1200px; margin: 0 auto; padding: 0 2rem;
+    height: 100%; display: flex; align-items: center; justify-content: space-between;
+}
+nav ul { display: flex; gap: 2rem; list-style: none; }
+nav a { color: var(--text2); font-size: .9375rem; font-weight: 500; }
+nav a:hover { color: var(--blue); }
+@media(max-width:767px){ nav ul { display: none; } }
+
+/* HERO */
+.hero {
+    padding: 3.5rem 0 2.5rem;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+.hero-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.hero h1 { font-size: 2.5rem; margin-bottom: .75rem; }
+@media(max-width:767px){ .hero h1 { font-size: 1.875rem; } }
+.hero p { font-size: 1.05rem; color: var(--text2); max-width: 60ch; }
+
+/* CONTROLES */
+.controls {
+    position: sticky; top: var(--header-height);
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+    padding: 1.5rem 0;
+}
+.controls-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.search-box {
+    position: relative;
+    margin-bottom: 1rem;
+}
+.search-box input {
+    width: 100%;
+    padding: .75rem 1rem .75rem 2.75rem;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: Inter, sans-serif;
+    background: var(--white);
+    color: var(--text);
+    transition: border-color .2s;
+}
+.search-box input:focus { outline: none; border-color: var(--blue); }
+.search-box svg {
+    position: absolute; left: 1rem; top: 50%; transform: translateY(-50%);
+    width: 18px; height: 18px; color: var(--text3);
+}
+.filters { display: flex; gap: .5rem; flex-wrap: wrap; }
+.chip {
+    font-size: .8125rem; font-weight: 500;
+    padding: .4rem .9rem;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--white);
+    color: var(--text2);
+    cursor: pointer;
+    font-family: Inter, sans-serif;
+    transition: all .15s;
+}
+.chip:hover { border-color: var(--blue); }
+.chip.active { background: var(--text); color: var(--white); border-color: var(--text); }
+
+/* GRID */
+.glossary {
+    max-width: 1100px; margin: 0 auto;
+    padding: 2.5rem 2rem 4rem;
+}
+.count { font-size: .875rem; color: var(--text3); margin-bottom: 1.5rem; }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+.card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--cat);
+    border-radius: 8px;
+    padding: 1.25rem 1.4rem;
+    transition: transform .15s, box-shadow .15s;
+}
+.card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(46,80,119,.08); }
+.card-head { display: flex; align-items: center; gap: .5rem; margin-bottom: .6rem; flex-wrap: wrap; }
+.card-icon { width: 18px; height: 18px; color: var(--cat); flex-shrink: 0; }
+.card-term { font-family: 'Libre Baskerville', serif; font-size: 1.0625rem; font-weight: 700; color: var(--text); line-height: 1.3; }
+.card-cat { font-size: .6875rem; font-weight: 600; color: var(--cat); text-transform: uppercase; letter-spacing: .05em; margin-left: auto; }
+.card-def { font-size: .9375rem; color: var(--text2); line-height: 1.65; }
+.card-note {
+    font-size: .875rem; color: var(--text3); line-height: 1.55;
+    margin-top: .75rem; padding-top: .75rem;
+    border-top: 1px solid var(--border);
+}
+.card-note strong { color: var(--cat); font-weight: 600; font-style: normal; }
+.empty { text-align: center; padding: 3rem 1rem; color: var(--text3); display: none; }
+
+/* FOOTER */
+.footer { background: var(--text); color: var(--white); padding: 2.5rem 0 1.5rem; }
+.footer-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap: 2rem; margin-bottom: 2rem; }
+.footer h4 { font-family: Inter, sans-serif; font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: rgba(255,255,255,.5); margin-bottom: .875rem; }
+.footer p { font-size: .9rem; color: rgba(255,255,255,.65); line-height: 1.6; }
+.footer ul { list-style: none; }
+.footer li { margin-bottom: .4rem; }
+.footer a { color: rgba(255,255,255,.7); font-size: .9375rem; }
+.footer a:hover { color: #fff; }
+.footer-bottom { padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.1); text-align: center; font-size: .8125rem; color: rgba(255,255,255,.4); }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <a href="index.html" class="logo-img"><img src="logotipo.svg" alt="BasketEvidence" style="height:52px;width:auto;display:block;"></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#articulos">Artículos</a></li>
+                <li><a href="el-proyecto.html">El proyecto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-inner">
+        <h1>Glosario</h1>
+        <p>Los términos que aparecen en los artículos, explicados sin jerga. De staff a staff: si alguna vez te has encontrado una palabra que frenaba la lectura, aquí está su traducción.</p>
+    </div>
+</section>
+
+<div class="controls">
+    <div class="controls-inner">
+        <div class="search-box">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            <input type="text" id="search" placeholder="Buscar término…" autocomplete="off">
+        </div>
+        <div class="filters" id="filters">
+            <button class="chip active" data-cat="all">Todos</button>
+            <button class="chip" data-cat="tecnico">Técnico-táctico</button>
+            <button class="chip" data-cat="fisico">Preparación física</button>
+            <button class="chip" data-cat="analisis">Análisis y estadística</button>
+            <button class="chip" data-cat="ciencia">Ciencia y metodología</button>
+        </div>
+    </div>
+</div>
+
+<main class="glossary">
+    <p class="count" id="count"></p>
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty">No hay términos que coincidan con tu búsqueda.</div>
+</main>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-grid">
+            <div>
+                <h4>BasketEvidence</h4>
+                <p>Investigación científica en baloncesto, traducida y aplicada.</p>
+            </div>
+            <div>
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="el-proyecto.html">El proyecto</a></li>
+                    <li><a href="glosario.html">Glosario</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="aviso-legal.html">Aviso legal</a></li>
+                    <li><a href="privacidad.html">Privacidad</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 BasketEvidence · <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a> · <a href="cookies.html">Cookies</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+const CATS = {
+    tecnico:  { color:'#2E5077', label:'Técnico-táctico', icon:'M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5' },
+    fisico:   { color:'#C4414B', label:'Preparación física', icon:'M6.5 6.5l11 11M21 21l-1-1M3 3l1 1M18 22l4-4M2 6l4-4M7 17l-5 5M17 7l5-5' },
+    analisis: { color:'#2C8C99', label:'Análisis y estadística', icon:'M3 3v18h18M7 14l4-4 4 4 5-5' },
+    ciencia:  { color:'#8B6F47', label:'Ciencia y metodología', icon:'M9 2v6l-5 9a2 2 0 002 3h12a2 2 0 002-3l-5-9V2M7 2h10' }
+};
+
+const TERMS = [
+    { t:'Timing del tiro', c:'tecnico', d:'En qué momento de la posesión se produce el lanzamiento (primeros segundos, mitad, final). Dos equipos pueden tirar lo mismo de tres pero en momentos muy distintos del ataque.', n:null },
+    { t:'Carga externa', c:'fisico', d:'Lo que el jugador hace medido desde fuera: metros recorridos, aceleraciones, saltos, velocidad. No mide el esfuerzo que le supone, solo el trabajo mecánico realizado.', n:'Dos jugadores pueden hacer la misma carga externa y sentirla muy distinta.' },
+    { t:'Carga interna', c:'fisico', d:'La respuesta del cuerpo a ese trabajo: frecuencia cardíaca, percepción de esfuerzo, lactato. Es el coste real que paga el jugador por el trabajo realizado.', n:null },
+    { t:'Player load', c:'fisico', d:'Indicador que combina las aceleraciones del cuerpo en los tres ejes (adelante-atrás, lados, arriba-abajo) para estimar el desgaste mecánico total. Cuanto más se mueve y frena un jugador, más acumula.', n:null },
+    { t:'RPE (esfuerzo percibido)', c:'fisico', d:'Cómo de duro siente el jugador que ha sido una sesión o un partido, normalmente en una escala del 1 al 10. Subjetivo pero sorprendentemente fiable para estimar la carga interna.', n:null },
+    { t:'Ratio trabajo:descanso', c:'fisico', d:'Relación entre el tiempo que el jugador está en acción y el que está parado o en baja intensidad. Un 1:0,7 significa que descansa menos de lo que trabaja, y por tanto es más exigente que un 1:1.', n:'Cuanto más bajo el segundo número, más densa es la exigencia.' },
+    { t:'LPS (posicionamiento local)', c:'analisis', d:'Tecnología que ubica al jugador dentro de la pista mediante antenas, sin depender del GPS, que no funciona bien en interiores. Permite medir posición, distancia y velocidad en tiempo real.', n:null },
+    { t:'UWB (banda ultraancha)', c:'analisis', d:'El tipo de señal que usan muchos sistemas de posicionamiento local para localizar al jugador con precisión de centímetros.', n:null },
+    { t:'Dispositivo inercial', c:'analisis', d:'Sensor que el jugador lleva encima (acelerómetro, giroscopio, magnetómetro) y que registra movimientos, impactos y saltos.', n:null },
+    { t:'Tamaño del efecto (ES)', c:'ciencia', d:'Mide cómo de grande es una diferencia, no solo si existe. Puedes tener una diferencia significativa pero diminuta; el tamaño del efecto te dice si esa diferencia importa de verdad en la práctica.', n:'Suele leerse como pequeño, moderado o grande.' },
+    { t:'Significación estadística (p-valor)', c:'ciencia', d:'Probabilidad de que un resultado sea fruto del azar. Un p menor de 0,05 se interpreta como que la diferencia probablemente es real, no casualidad.', n:'Significativo no es lo mismo que importante.' },
+    { t:'Estudio observacional', c:'ciencia', d:'Investigación que mide lo que ocurre sin intervenir ni manipular nada. Describe asociaciones, pero no puede demostrar causa-efecto.', n:null },
+    { t:'CHAID', c:'ciencia', d:'Técnica estadística que va dividiendo los datos en ramas para encontrar qué variable separa mejor unos grupos de otros. Como un árbol de decisiones que identifica el factor más diferenciador.', n:null }
+];
+
+const grid = document.getElementById('grid');
+const empty = document.getElementById('empty');
+const count = document.getElementById('count');
+const search = document.getElementById('search');
+let activeCat = 'all';
+
+function escapeHtml(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function render() {
+    const q = search.value.toLowerCase().trim();
+    const list = TERMS.filter(x => {
+        const okCat = activeCat === 'all' || x.c === activeCat;
+        const okQ = !q || x.t.toLowerCase().includes(q) || x.d.toLowerCase().includes(q);
+        return okCat && okQ;
+    }).sort((a,b) => a.t.localeCompare(b.t, 'es'));
+
+    count.textContent = list.length === 1 ? '1 término' : list.length + ' términos';
+
+    grid.innerHTML = list.map(x => {
+        const cat = CATS[x.c];
+        return `<article class="card" style="--cat:${cat.color}">
+            <div class="card-head">
+                <svg class="card-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="${cat.icon}"/></svg>
+                <span class="card-term">${escapeHtml(x.t)}</span>
+                <span class="card-cat">${cat.label}</span>
+            </div>
+            <p class="card-def">${escapeHtml(x.d)}</p>
+            ${x.n ? `<p class="card-note"><strong>En la práctica:</strong> ${escapeHtml(x.n)}</p>` : ''}
+        </article>`;
+    }).join('');
+
+    empty.style.display = list.length ? 'none' : 'block';
+}
+
+search.addEventListener('input', render);
+document.getElementById('filters').addEventListener('click', e => {
+    if (!e.target.classList.contains('chip')) return;
+    document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    e.target.classList.add('active');
+    activeCat = e.target.dataset.cat;
+    render();
+});
+
+render();
+</script>
+
+</body>
+</html>
