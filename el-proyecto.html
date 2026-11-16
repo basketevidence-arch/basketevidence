@@ -116,6 +116,27 @@ nav a:hover { color: var(--blue); }
     padding: 1.5rem;
     margin-top: 1.25rem;
 }
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+.profile-photo {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid var(--white);
+    box-shadow: 0 1px 4px rgba(0,0,0,.12);
+}
+.profile-header .profile-name,
+.profile-header .profile-role { margin-bottom: 0; }
+.profile-header .profile-role { margin-top: .15rem; }
+@media(max-width:520px){
+    .profile-header { flex-direction: column; align-items: flex-start; gap: .875rem; }
+}
 .profile-name {
     font-family: 'Libre Baskerville', serif;
     font-size: 1.25rem;
@@ -249,9 +270,8 @@ nav a:hover { color: var(--blue); }
     <div class="container">
         <p>BasketEvidence es la web que me habría gustado encontrar cuando empecé a entrenar: un lugar donde aprender baloncesto a partir de la mejor investigación científica publicada por universidades y centros de investigación de todo el mundo.</p>
         <p>En el baloncesto se habla mucho desde la experiencia personal y la intuición. Ambas son valiosas. Pero aquí añadimos otra mirada: la ciencia y los datos.</p>
-        <p>Analizamos la evidencia científica, la traducimos y la llevamos a la pista de forma clara, útil y aplicable.</p>
-        <p>Un espacio pensado para entrenadores, preparadores físicos y jugadores que quieren entender mejor el juego y tomar mejores decisiones desde el conocimiento.</p>
-        <div class="highlight">Un estudio por semana. Sin jerga innecesaria. De la investigación a la pista.</div>
+        <p>Analizamos la evidencia científica y con ella contestamos preguntas e intentamos dar sentido a todo lo que se hace en la pista.</p>
+        <p>Un espacio pensado para entrenadores, preparadores físicos y jugadores que quieren entender mejor el juego y tomar decisiones desde el conocimiento.</p>
     </div>
 </section>
 
@@ -259,8 +279,13 @@ nav a:hover { color: var(--blue); }
     <div class="container">
         <h2>Quién está detrás</h2>
         <div class="profile">
-            <p class="profile-name">Álvaro García Tomás</p>
-            <p class="profile-role">Editor de BasketEvidence</p>
+            <div class="profile-header">
+                <img src="alvaro.jpg" alt="Álvaro García Tomás" class="profile-photo">
+                <div>
+                    <p class="profile-name">Álvaro García Tomás</p>
+                    <p class="profile-role">Editor de BasketEvidence</p>
+                </div>
+            </div>
             <div class="credentials">
                 <span class="credential">Licenciado en Ciencias de la Actividad Física y del Deporte</span>
                 <span class="credential">Máster en Alto Rendimiento y Salud</span>
@@ -273,34 +298,9 @@ nav a:hover { color: var(--blue); }
 
 <section class="section">
     <div class="container">
-        <h2>Cómo está estructurado cada artículo</h2>
-        <p>Cada análisis sigue la misma estructura para que puedas ir directo a lo que necesitas.</p>
-        <div class="structure-grid">
-            <div class="structure-item">
-                <h3>Idea clave</h3>
-                <p>Una frase. El mensaje central sin rodeos.</p>
-            </div>
-            <div class="structure-item">
-                <h3>En 20 segundos</h3>
-                <p>Quién, qué estudiaron y qué encontraron.</p>
-            </div>
-            <div class="structure-item">
-                <h3>Por qué importa</h3>
-                <p>Por qué merece atención para el trabajo en cancha.</p>
-            </div>
-            <div class="structure-item">
-                <h3>Te lo contamos</h3>
-                <p>Resultados con detalle. Números cuando aportan.</p>
-            </div>
-            <div class="structure-item">
-                <h3>Qué muestra / qué no</h3>
-                <p>Lo que los datos demuestran y sus límites reales.</p>
-            </div>
-            <div class="structure-item">
-                <h3>Conclusiones</h3>
-                <p>Lectura práctica para el staff. Con implicación concreta.</p>
-            </div>
-        </div>
+        <h2>Cómo es cada artículo</h2>
+        <p>Cada artículo parte de un estudio y lo cuenta sin rodeos: el hallazgo primero, los datos que lo sostienen, qué significa para el trabajo del staff y, sobre todo, qué no significa. La forma se adapta a cada investigación —no es lo mismo un análisis de miles de partidos que un experimento o un metaanálisis—, pero el compromiso es siempre el mismo.</p>
+        <p>Vas a encontrar el dato claro y en su contexto, el lenguaje llano en lugar de la jerga, y los límites de cada estudio dichos con honestidad. Porque un hallazgo solo es útil cuando se entiende hasta dónde llega.</p>
     </div>
 </section>
 
