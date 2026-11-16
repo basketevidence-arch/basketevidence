@@ -2357,7 +2357,7 @@ function renderArticleCard(art){
             <div class="article-meta">${renderTags(art)}</div>
             <h3 class="article-title">${art.title}</h3>
             <p class="article-excerpt">${art.excerpt}</p>
-            <div class="article-footer"><span class="read-time">${calculateReadTime(art.blocks)} min de lectura</span><span class="read-more">Leer →</span></div>
+            <div class="article-footer"><span class="read-more">Leer análisis →</span></div>
         </div>`;
 }
 
@@ -2369,7 +2369,7 @@ function renderFeaturedArticle(){
         <div class="featured-meta">${renderTags(f)}</div>
         <h2 class="featured-title">${f.title}</h2>
         <p class="featured-excerpt">${f.excerpt}</p>
-        <div class="featured-footer"><span class="featured-read-more">Leer artículo →</span></div>`;
+        <div class="featured-footer"><span class="featured-read-more">Leer análisis →</span></div>`;
     el.onclick = () => openArticle(f.id);
 }
 
