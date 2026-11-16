@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>¿Funcionan los tiempos muertos? Cuándo y cómo, según la evidencia — BasketEvidence</title>
+<meta name="description" content="¿Funcionan los tiempos muertos? Cuándo pedirlos, en qué situación y contra quién, según un análisis de 4.051 tiempos muertos.">
+<link rel="canonical" href="https://basketevidence.com/articulo/tiempos-muertos-baloncesto.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="¿Funcionan los tiempos muertos? Cuándo y cómo, según la evidencia">
+<meta property="og:description" content="¿Funcionan los tiempos muertos? Cuándo pedirlos, en qué situación y contra quién, según un análisis de 4.051 tiempos muertos.">
+<meta property="og:url" content="https://basketevidence.com/articulo/tiempos-muertos-baloncesto.html">
+<meta property="og:site_name" content="BasketEvidence">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "¿Funcionan los tiempos muertos? Cuándo y cómo, según la evidencia", "description": "¿Funcionan los tiempos muertos? Cuándo pedirlos, en qué situación y contra quién, según un análisis de 4.051 tiempos muertos.", "author": {"@type": "Person", "name": "Álvaro García Tomás"}, "publisher": {"@type": "Organization", "name": "BasketEvidence"}, "inLanguage": "es-ES", "url": "https://basketevidence.com/articulo/tiempos-muertos-baloncesto.html"}</script>
+<style>
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('../fonts/inter-400.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('../fonts/inter-500.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('../fonts/inter-600.woff2') format('woff2')}
+@font-face{font-family:'Libre Baskerville';font-style:normal;font-weight:400;font-display:swap;src:url('../fonts/libre-baskerville-400.woff2') format('woff2')}
+@font-face{font-family:'Libre Baskerville';font-style:normal;font-weight:700;font-display:swap;src:url('../fonts/libre-baskerville-700.woff2') format('woff2')}
+
+:root {
+    --bg-cream: #F5F4EF;
+    --text-primary: #0A0A0A;
+    --text-secondary: #4A4A4A;
+    --text-tertiary: #6B6B6B;
+    --accent-blue: #2E5077;
+    --accent-blue-dark: #1E3550;
+    --border-subtle: #D4D2C8;
+    --white: #FFF;
+    --black: #1A1A1A;
+    --header-height: 64px;
+    
+    /* Colores por categoría */
+    --cat-tactica: #2E5077;
+    --cat-fisiologia: #C84C4C;
+    --cat-analitica: #4C7C84;
+    --cat-cognicion: #8B6C4C;
+    --cat-motor: #6C4C7C;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 18px;
+}
+
+body {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+    background-color: var(--bg-cream);
+    -webkit-font-smoothing: antialiased;
+    padding-top: var(--header-height);
+}
+
+body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+body.overlay-open {
+    overflow: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+}
+
+h1 {
+    font-size: 2.75rem;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 3rem 0 1.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 2.5rem 0 1rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+    margin: 2rem 0 0.75rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    max-width: 65ch;
+}
+
+ul {
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.75rem;
+    max-width: 60ch;
+}
+
+a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--accent-blue);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ============================================
+   HEADER
+============================================ */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    background: var(--white);
+    border-bottom: 1px solid var(--border-subtle);
+    z-index: 1000;
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
+}
+
+.logo:hover {
+    color: var(--accent-blue);
+}
+
+.nav-desktop {
+    display: none;
+}
+
+.nav-desktop ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+}
+
+.nav-desktop a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.nav-desktop a:hover {
+    color: var(--accent-blue);
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text-primary);
+    transition: all 0.3s;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--white);
+    transform: translateX(100%);
+    transition: transform 0.3s;
+    z-index: 999;
+    overflow-y: auto;
+    padding: 2rem;
+}
+
+.mobile-menu.open {
+    transform: translateX(0);
+}
+
+.mobile-menu ul {
+    list-style: none;
+    margin: 0;
+}
+
+.mobile-menu li {
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 1.25rem 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* ============================================
+   HERO SECTION
+============================================ */
+.hero {
+    padding: 4rem 0 3rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    max-width: 50ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1.75rem;
+    background: var(--accent-blue);
+    color: var(--white);
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+}
+
+.hero-cta:hover {
+    background: var(--accent-blue-dark);
+    color: var(--white);
+}
+
+/* ============================================
+   POR QUÉ BASKETEVIDENCE
+============================================ */
+.why-section {
+    padding: 4rem 0;
+    background: var(--white);
+}
+
+.why-content {
+    max-width: 75ch;
+    margin: 0 auto;
+}
+
+.why-text {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.why-text:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   ARTÍCULO DE LA SEMANA
+============================================ */
+.featured-article-section {
+    padding: 3rem 0 4rem;
+    background: #F0F4F8;
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.featured-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-blue);
+    margin-bottom: 1.5rem;
+}
+
+.featured-article {
+    background: var(--white);
+    border: 2px solid var(--accent-blue);
+    border-radius: 8px;
+    padding: 3rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(46, 80, 119, 0.08);
+}
+
+.featured-article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(46, 80, 119, 0.15);
+    border-color: var(--accent-blue-dark);
+}
+
+.featured-meta {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.featured-title {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 1rem;
+    color: var(--text-primary);
+}
+
+.featured-excerpt {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin: 0 0 1.5rem;
+    max-width: 70ch;
+}
+
+.featured-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.featured-read-more {
+    font-weight: 600;
+    color: var(--accent-blue);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: gap 0.2s;
+}
+
+.featured-article:hover .featured-read-more {
+    gap: 0.75rem;
+}
+
+/* ============================================
+   PREGUNTAS QUE RESPONDE LA EVIDENCIA
+============================================ */
+/* Lo más leído */
+.most-read-section {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.most-read-section .section-title {
+    text-align: left;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.most-read-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+/* Responsive */
+@media (max-width: 767px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .featured-article {
+        padding: 1.5rem 1rem;
+    }
+    
+    .featured-title {
+        font-size: 1.25rem;
+        line-height: 1.3;
+    }
+    
+    .featured-excerpt {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+    
+    .featured-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding-top: 1rem;
+    }
+    
+    .most-read-section .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-intro {
+        font-size: 0.95rem;
+    }
+    
+    .most-read-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* ============================================
+   SECCIÓN ARTÍCULOS
+============================================ */
+.articles-section {
+    padding: 4rem 0;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 1.75rem;
+    margin: 0;
+}
+
+.view-all {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--accent-blue);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.view-all:hover {
+    gap: 0.75rem;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.article-card {
+    display: block;
+    background: var(--white);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+.article-card:hover .article-title { color: var(--accent-blue); }
+
+.article-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-color: var(--accent-blue);
+}
+
+.article-meta {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.article-context {
+    font-size: 0.8125rem;
+    font-weight: 400;
+    color: #666;
+    letter-spacing: 0.01em;
+    line-height: 1.4;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.625rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+.badge-nivel {
+    background: var(--text-primary);
+    color: var(--white);
+}
+
+.badge-categoria {
+    background: var(--border-subtle);
+    color: var(--text-primary);
+}
+
+.badge-categoria.tactica { background: var(--cat-tactica); color: var(--white); }
+.badge-categoria.fisiologia { background: var(--cat-fisiologia); color: var(--white); }
+.badge-categoria.analitica { background: var(--cat-analitica); color: var(--white); }
+.badge-categoria.cognicion { background: var(--cat-cognicion); color: var(--white); }
+.badge-categoria.motor { background: var(--cat-motor); color: var(--white); }
+
+.badge-revista {
+    background: #E8F4F8;
+    color: #1E5A6E;
+    text-transform: none;
+}
+
+.badge-contexto {
+    background: #F0F4F8;
+    color: var(--accent-blue);
+}
+
+.badge-institucion {
+    background: #F5F4EF;
+    color: #6B5D4F;
+    text-transform: none;
+}
+
+.article-year {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+}
+
+.article-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.article-excerpt {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.article-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.read-time {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+}
+
+/* ============================================
+   NEWSLETTER SECTION
+============================================ */
+.newsletter-section {
+    padding: 4rem 0;
+    background: var(--accent-blue);
+    color: var(--white);
+}
+
+.newsletter-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.newsletter-content h2 {
+    color: var(--white);
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.newsletter-content p {
+    margin: 0 auto 2rem;
+    color: rgba(255,255,255,0.9);
+    max-width: 45ch;
+}
+.newsletter-legal {
+    font-size: .8rem !important;
+    color: rgba(255,255,255,.7) !important;
+    margin: 1rem auto 0 !important;
+    max-width: 48ch;
+    line-height: 1.5;
+}
+.newsletter-legal a { color: #cfe0f2; text-decoration: underline; }
+
+.newsletter-form {
+    display: flex;
+    gap: 0.75rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-input {
+    flex: 1;
+    padding: 0.875rem 1.25rem;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 6px;
+    font-size: 1rem;
+    background: rgba(255,255,255,0.1);
+    color: var(--white);
+    transition: all 0.2s;
+}
+
+.newsletter-input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+.newsletter-input:focus {
+    outline: none;
+    border-color: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.15);
+}
+
+.newsletter-button {
+    padding: 0.875rem 1.75rem;
+    background: var(--white);
+    color: var(--accent-blue);
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.newsletter-button:hover {
+    background: var(--bg-cream);
+    transform: translateY(-1px);
+}
+
+/* ============================================
+   FOOTER
+============================================ */
+.footer {
+    background: var(--white);
+    border-top: 1px solid var(--border-subtle);
+    padding: 3rem 0 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    margin: 0;
+}
+
+.footer-section li {
+    margin-bottom: 0.625rem;
+}
+
+.footer-section a {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.footer-section a:hover {
+    color: var(--accent-blue);
+}
+
+.footer-about {
+    max-width: 300px;
+}
+
+.footer-about p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-subtle);
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin: 0;
+}
+
+/* ============================================
+   OVERLAY ARTÍCULO
+============================================ */
+.article-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--bg-cream);
+    z-index: 2000;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.3s;
+}
+
+.article-overlay.open {
+    transform: translateX(0);
+}
+
+.article-header {
+    position: sticky;
+    top: 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 1rem 0;
+    z-index: 10;
+}
+
+.article-header-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-article {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.close-article:hover {
+    color: var(--accent-blue);
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+}
+
+.breadcrumbs a {
+    color: var(--text-secondary);
+}
+
+.breadcrumbs a:hover {
+    color: var(--accent-blue);
+}
+
+.breadcrumb-separator {
+    color: var(--text-tertiary);
+}
+
+.article-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.article-title-full {
+    font-size: 2.25rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.article-metadata {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: 2rem;
+}
+
+.metadata-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.metadata-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-tertiary);
+    font-weight: 600;
+}
+
+.metadata-value {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.article-section {
+    margin-bottom: 3rem;
+}
+
+.article-section h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.article-section p {
+    white-space: pre-line;
+}
+
+.social-share {
+    display: flex;
+    gap: 0.75rem;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+    margin: 3rem 0;
+}
+
+.share-label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-right: 0.5rem;
+}
+
+.share-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    background: var(--white);
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.share-button:hover {
+    border-color: var(--accent-blue);
+    background: var(--accent-blue);
+    color: var(--white);
+}
+
+/* ============================================
+   ETIQUETAS NUEVAS (tipo · muestra · año)
+============================================ */
+.tag {
+    display: inline-block;
+    padding: 0.25rem 0.625rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 1.3;
+}
+.tag-tipo {
+    background: var(--accent-blue);
+    color: var(--white);
+}
+.tag-muestra {
+    background: #E3EFE3;
+    color: #2E6B41;
+    border: 1px solid #C5E0C5;
+}
+.tag-liga {
+    background: #ECEBE6;
+    color: #55514A;
+}
+.tag-inst {
+    background: #F0EDE4;
+    color: #6B5D4F;
+}
+
+/* ============================================
+   RENDER DE ARTÍCULO (estructura B)
+============================================ */
+.article-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-bottom: 1.75rem;
+    margin-bottom: 1.75rem;
+    border-bottom: 1px solid var(--border-subtle);
+}
+.article-body h2 {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 1.4rem;
+    color: var(--accent-blue);
+    margin: 2.25rem 0 0.9rem;
+}
+.article-body h3 {
+    font-family: Inter, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1.5rem 0 0.5rem;
+    letter-spacing: 0;
+}
+.article-body p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--text-secondary);
+    margin-bottom: 1.1rem;
+    max-width: none;
+}
+.article-body p.lede {
+    font-style: italic;
+    color: var(--text-secondary);
+    border-left: 3px solid var(--border-subtle);
+    padding-left: 1.25rem;
+    margin: 0 0 2rem;
+}
+.article-body strong { color: var(--text-primary); font-weight: 600; }
+.article-body ul {
+    list-style: none;
+    margin: 0 0 1.3rem;
+    padding: 0;
+}
+.article-body li {
+    position: relative;
+    padding-left: 1.3rem;
+    margin-bottom: 0.65rem;
+    max-width: none;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+.article-body li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--accent-blue);
+    font-weight: 600;
+}
+.art-chart { text-align: center; margin: 1.5rem 0 0.5rem; }
+.art-chart img { max-width: 100%; height: auto; border-radius: 6px; }
+.chart-cap {
+    text-align: center;
+    font-size: 0.9rem !important;
+    font-style: italic;
+    color: var(--text-tertiary) !important;
+    margin-bottom: 1.5rem;
+}
+.art-table-wrap { overflow-x: auto; margin: 1rem 0 1.5rem; }
+.art-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+.art-table th {
+    text-align: left;
+    font-family: Inter, sans-serif;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-tertiary);
+    font-weight: 600;
+    border-bottom: 2px solid var(--accent-blue);
+    padding: 0.5rem 0.75rem;
+}
+.art-table td {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid var(--border-subtle);
+    color: var(--text-secondary);
+    vertical-align: top;
+}
+.art-table td.first { font-weight: 600; color: var(--text-primary); }
+.art-source {
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border-subtle);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+    
+    .nav-desktop {
+        display: block;
+    }
+    
+    .mobile-menu {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    
+    .newsletter-form {
+        flex-direction: row;
+    }
+    
+    .article-title-full {
+        font-size: 2.75rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .categories-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+    
+/* Ajustes página de artículo */
+.article-page { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+.article-breadcrumbs { font-size: .85rem; color: var(--text-tertiary); margin-bottom: 1.5rem; }
+.article-breadcrumbs a { color: var(--accent-blue); text-decoration: none; }
+.article-breadcrumbs a:hover { text-decoration: underline; }
+.article-title-full { font-family: 'Libre Baskerville', Georgia, serif; font-size: 2rem; line-height: 1.2; color: var(--text-primary); margin-bottom: 1.25rem; }
+@media(max-width:600px){ .article-title-full { font-size: 1.6rem; } }
+.back-link { display:inline-block; margin-top:2.5rem; color: var(--accent-blue); text-decoration:none; font-weight:500; }
+.back-link:hover { text-decoration: underline; }
+.newsletter-legal { font-size:.8rem; color:rgba(255,255,255,.75); margin-top:1rem; line-height:1.5; }
+.newsletter-legal a { color:#cfe0f2; text-decoration:underline; }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner" style="max-width:1200px;margin:0 auto;padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;">
+    <a href="../index.html" class="logo-img"><img src="../logotipo.svg" alt="BasketEvidence" style="height:52px;width:auto;display:block;"></a>
+    <nav><ul style="display:flex;gap:2rem;list-style:none;">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="../index.html#articulos">Artículos</a></li>
+      <li><a href="../el-proyecto.html">El proyecto</a></li>
+      <li><a href="../contacto.html">Contacto</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main class="article-page">
+  <div class="article-breadcrumbs">
+    <a href="../index.html">Inicio</a> › <a href="../index.html#articulos">Artículos</a>
+  </div>
+  <h1 class="article-title-full">¿Funcionan los tiempos muertos? Cuándo y cómo, según la evidencia</h1>
+  <div class="article-tags"><span class="tag tag-tipo">Observacional</span><span class="tag tag-muestra">4.051 tiempos muertos</span><span class="tag tag-liga">Liga china (CBA)</span><span class="tag tag-inst">Shanghai Univ. of Sport</span></div>
+  <div class="article-body"><h2>El hallazgo</h2><p>Sí, el tiempo muerto cambia la dinámica del partido. Pero su efecto depende de tres cosas: <strong>cuándo</strong> se pide, <strong>en qué situación</strong> y <strong>contra quién</strong>.</p><p>Resumido: el tiempo muerto rinde más en las fases normales del partido que en los últimos cinco minutos; ayuda cuando sufres un parcial en contra, pero tiende a enfriarte si lo pides cuando vas lanzado; y pierde eficacia contra rivales de alto nivel.</p><h2>Los números</h2><ul><li>El efecto del tiempo muerto fue <strong>mayor en el juego normal que en los últimos 5 minutos</strong>.</li><li>En <strong>desventaja</strong> (sufriendo un parcial), <strong>mejoró</strong> la dinámica del equipo.</li><li>En <strong>ventaja</strong> (en racha a favor), la <strong>redujo</strong>.</li><li>Fue <strong>menos eficaz contra rivales de alto nivel</strong>, que se reorganizan mejor tras la pausa.</li><li>Datos de <strong>1.235 partidos</strong> de la CBA, temporadas 2021-22 a 2023-24, en tres ventanas de tiempo (48, 96 y 144 s).</li></ul><h2>El estudio, por dentro</h2><p>Lo firma un equipo de la Universidad del Deporte de Shanghái. Analizaron los registros jugada a jugada de 1.235 partidos de la liga china (CBA), aislando 4.051 tiempos muertos. De cada uno midieron la "dinámica" del partido —lo que en inglés llaman <em>momentum</em>— antes y después de la pausa, en tres ventanas de tiempo: corta (48 s), media (96 s) y larga (144 s).</p><p>Conviene aclarar qué es aquí "dinámica", porque es un concepto resbaladizo. No es la "racha" en sentido místico, sino una definición <strong>medible</strong>: el ritmo al que cambia la diferencia de puntos en el tiempo. Un equipo está en dinámica positiva si gana terreno en el marcador de forma sostenida, y negativa si lo pierde. Así se evita el viejo debate sobre si las rachas "existen": se mide un cambio concreto en el marcador, no una sensación.</p><p>Con esa base, cruzaron el efecto del tiempo muerto con el contexto. De ahí salen las tres respuestas a "cuándo y cómo":</p><h3>Cuándo en el partido: antes rinde más que al final.</h3><p>El tiempo muerto movió más la dinámica en las fases normales que en los últimos cinco minutos. Es contraintuitivo, porque la costumbre es reservar los tiempos para el tramo final. Pero en ese tramo todos paran constantemente, las interrupciones se encadenan y el rival también se reorganiza, así que el efecto de cada pausa se diluye. Un tiempo muerto en mitad del partido, cuando el juego fluye, tuvo más impacto.</p><h3>En qué situación: rescata si sufres, enfría si dominas.</h3><p>Al separar según el equipo fuera ganando o perdiendo, el efecto cambia de signo:</p><ul><li><strong>En desventaja, el tiempo muerto ayuda.</strong> Si el equipo venía sufriendo un parcial en contra, parar el partido mejoró su dinámica de forma clara. Es la función de siempre —cortar la mala racha, reorganizar, calmar— y los datos la confirman.</li><li><strong>En ventaja, el tiempo muerto perjudica.</strong> Si el equipo estaba en racha a favor, pedir tiempo muerto <em>redujo</em> su dinámica. Interrumpir tu propio buen momento tuvo, de media, el efecto contrario al buscado: la pausa rompió tu inercia tanto como la del rival.</li></ul><h3>Contra quién: menos eficaz ante los buenos.</h3><p>Frente a equipos de alto nivel, el tiempo muerto rindió menos: mejor preparados, se recomponen antes y neutralizan el efecto de la pausa.</p><p>La conclusión reordena la decisión del banquillo. No es "¿pido tiempo muerto?", sino "¿lo estoy pidiendo en el momento y la situación en que de verdad sirve?".</p><h2>Qué significa para el staff</h2><p>El tiempo muerto es una de las pocas decisiones que un entrenador toma, consciente y a solas, varias veces por partido. El estudio sugiere afinar dos hábitos muy extendidos.</p><p>El <strong>cuándo</strong>: reservar todos los tiempos para los minutos finales puede desperdiciarlos. El recurso movió más la dinámica en fases normales, donde una pausa bien colocada —para cortar un parcial en contra antes de que se agrande— tuvo más efecto que la misma pausa perdida entre las interrupciones del final.</p><p>El <strong>para qué</strong>: pararlo cuando sufres tiene respaldo; pararlo cuando vas lanzado puede volverse en tu contra. El gesto defensivo de "tiempo muerto para asegurar" mientras dominas rompió, de media, justo la inercia que se quería proteger.</p><p>Nada de esto es una fórmula —lo que se dice y se ajusta dentro de esos segundos sigue siendo decisivo, y contra un buen rival el margen es menor—, pero sí una guía sobre en qué momentos y situaciones la pausa juega a favor.</p><h2>Qué NO significa</h2><ul><li><strong>"Dinámica" es un concepto discutido.</strong> Aunque el estudio usa una definición medible (cambio de marcador por tiempo), hay debate científico sobre hasta qué punto las "rachas" son reales o reflejan azar y regresión a la media. Léelo como una tendencia estadística, no como una ley del juego.</li><li><strong>Es descriptivo, no causal al 100%.</strong> Mide qué pasa antes y después del tiempo, pero no aísla todo lo que ocurre a la vez (cambios, faltas, el propio rival).</li><li><strong>No dice qué hacer <em>dentro</em> del tiempo muerto.</strong> Solo evalúa el efecto de pararlo o no, cuándo y en qué situación.</li><li><strong>Contexto chino (CBA), una liga.</strong> El patrón es probablemente general, pero no está comprobado en ACB, NBA u otras competiciones con reglas y ritmos distintos (p. ej. los tiempos de televisión).</li><li><strong>Son promedios.</strong> "En ventaja enfría" o "al final vale menos" son medias; un tiempo muerto concreto, bien usado, puede desmentirlas. No sustituye el criterio del entrenador.</li></ul><div class="art-source"><strong>Fuente:</strong> Qiu, M., Zhang, K., Chao, Y. &amp; Zhang, M. (2025). <em>Interrupt or reinforce? The impact of timeout on momentum in basketball game</em>. Frontiers in Psychology, 16:1673186. Shanghai University of Sport.</div></div>
+  <div class="newsletter-section" style="margin-top:3.5rem;border-radius:8px;">
+  <div class="newsletter-content">
+    <h2>Entra en el Evidence Club</h2>
+    <p>Gratis y sin spam: cada nuevo análisis, directo a tu correo.</p>
+    <form action="https://basketevidence.us9.list-manage.com/subscribe/post?u=ac2038e8422153d1f97ec35fbb&amp;id=622b40d9c9&amp;f_id=002cd0e3f0" method="post" class="newsletter-form" name="mc-embedded-subscribe-form" target="_blank">
+      <input type="email" name="EMAIL" class="newsletter-input" placeholder="Tu email" required>
+      <div style="position:absolute;left:-5000px;" aria-hidden="true"><input type="text" name="b_ac2038e8422153d1f97ec35fbb_622b40d9c9" tabindex="-1" value=""></div>
+      <button type="submit" class="newsletter-button">Suscribirme</button>
+    </form>
+    <p class="newsletter-legal">Al suscribirte aceptas nuestra <a href="../privacidad.html">Política de Privacidad</a>. Gestionamos la newsletter con Mailchimp y puedes darte de baja cuando quieras.</p>
+  </div>
+</div>
+  <a href="../index.html#articulos" class="back-link">← Volver a los artículos</a>
+</main>
+
+<footer class="footer" style="background:var(--text-primary,#0A0A0A);color:#fff;padding:2.5rem 0 1.5rem;margin-top:3rem;">
+  <div style="max-width:1100px;margin:0 auto;padding:0 2rem;text-align:center;font-size:.85rem;color:rgba(255,255,255,.55);">
+    <p>© 2026 BasketEvidence · <a href="../aviso-legal.html" style="color:rgba(255,255,255,.6)">Aviso legal</a> · <a href="../privacidad.html" style="color:rgba(255,255,255,.6)">Privacidad</a> · <a href="../cookies.html" style="color:rgba(255,255,255,.6)">Cookies</a></p>
+  </div>
+</footer>
+</body>
+</html>

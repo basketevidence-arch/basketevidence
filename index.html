@@ -20,9 +20,13 @@
     <meta name="twitter:title" content="BasketEvidence — Divulgación científica aplicada al baloncesto">
     <meta name="twitter:description" content="Baloncesto basado en ciencia. Divulgación basada en investigación científica.">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+    @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/inter-400.woff2') format('woff2')}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/inter-500.woff2') format('woff2')}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/inter-600.woff2') format('woff2')}
+    @font-face{font-family:'Libre Baskerville';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/libre-baskerville-400.woff2') format('woff2')}
+    @font-face{font-family:'Libre Baskerville';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/libre-baskerville-700.woff2') format('woff2')}
+    </style>
     
     <style>
 :root {
@@ -506,13 +510,17 @@ a:hover {
 }
 
 .article-card {
+    display: block;
     background: var(--white);
     border: 1px solid var(--border-subtle);
     border-radius: 8px;
     padding: 1.5rem;
     transition: all 0.2s;
     cursor: pointer;
+    text-decoration: none;
+    color: inherit;
 }
+.article-card:hover .article-title { color: var(--accent-blue); }
 
 .article-card:hover {
     transform: translateY(-4px);
@@ -638,6 +646,14 @@ a:hover {
     color: rgba(255,255,255,0.9);
     max-width: 45ch;
 }
+.newsletter-legal {
+    font-size: .8rem !important;
+    color: rgba(255,255,255,.7) !important;
+    margin: 1rem auto 0 !important;
+    max-width: 48ch;
+    line-height: 1.5;
+}
+.newsletter-legal a { color: #cfe0f2; text-decoration: underline; }
 
 .newsletter-form {
     display: flex;
@@ -1231,6 +1247,7 @@ a:hover {
                 </div>
                 <button type="submit" class="newsletter-button">Suscribirme</button>
             </form>
+            <p class="newsletter-legal">Al suscribirte aceptas nuestra <a href="privacidad.html">Política de Privacidad</a>. Gestionamos la newsletter con Mailchimp y puedes darte de baja cuando quieras.</p>
         </div>
     </div>
 </section>
@@ -1280,23 +1297,7 @@ a:hover {
 </footer>
 
 <!-- OVERLAY ARTÍCULO -->
-<div class="article-overlay" id="article-overlay">
-    <div class="article-header">
-        <div class="article-header-inner">
-            <div class="breadcrumbs" id="breadcrumbs">
-                <!-- Se genera dinámicamente -->
-            </div>
-            <button class="close-article" id="close-article">
-                <span>✕</span>
-                <span>Cerrar</span>
-            </button>
-        </div>
-    </div>
-    
-    <div class="article-content" id="article-detail">
-        <!-- Se genera dinámicamente -->
-    </div>
-</div>
+<!-- Los artículos ahora tienen página propia en /articulo/<slug>.html -->
 
 <script>
 // ============================================
@@ -1426,7 +1427,9 @@ const ARTICLES_DATA = [
     "type": "source",
     "html": "<strong>Fuente:</strong> Cabarkapa, D., Cabarkapa, D. V. &amp; Fry, A. C. (2024). <em>Game-related statistics that discriminate winning from losing in NCAA Division-I men's basketball</em>. Frontiers in Sports and Active Living, 6:1387918. University of Kansas."
    }
-  ]
+  ],
+  "slug": "estadisticas-ganar-perder-baloncesto",
+  "meta": "Un análisis de 5.147 partidos de la NCAA revela qué estadísticas separan de verdad a los equipos que ganan de los que pierden."
  },
  {
   "id": 2,
@@ -1555,7 +1558,9 @@ const ARTICLES_DATA = [
     "type": "source",
     "html": "<strong>Fuente:</strong> Qiu, M., Zhang, K., Chao, Y. &amp; Zhang, M. (2025). <em>Interrupt or reinforce? The impact of timeout on momentum in basketball game</em>. Frontiers in Psychology, 16:1673186. Shanghai University of Sport."
    }
-  ]
+  ],
+  "slug": "tiempos-muertos-baloncesto",
+  "meta": "¿Funcionan los tiempos muertos? Cuándo pedirlos, en qué situación y contra quién, según un análisis de 4.051 tiempos muertos."
  },
  {
   "id": 3,
@@ -1690,7 +1695,9 @@ const ARTICLES_DATA = [
     "type": "source",
     "html": "<strong>Fuente:</strong> Luo, S., Soh, K. G., Zhao, Y., Soh, K. L., Sun, H., Nasiruddin, N. J. M., Zhai, X. &amp; Ma, L. (2023). <em>Effect of core training on athletic and skill performance of basketball players: A systematic review</em>. PLOS ONE, 18(6):e0287379."
    }
-  ]
+  ],
+  "slug": "entrenar-core-baloncesto",
+  "meta": "¿Sirve entrenar el core en baloncesto? Una revisión sistemática resume qué mejora (fuerza, salto, tiro) y con qué dosis."
  },
  {
   "id": 4,
@@ -1831,7 +1838,9 @@ const ARTICLES_DATA = [
     "type": "source",
     "html": "<strong>Fuente:</strong> Staw, B. M., DeCelles, K. A. &amp; de Goey, P. (2019). <em>Leadership in the locker room: How the intensity of leaders' unpleasant affective displays shapes team performance</em>. Journal of Applied Psychology, 104(12), 1547-1557. University of California, Berkeley."
    }
-  ]
+  ],
+  "slug": "enfado-entrenador-descanso",
+  "meta": "¿Es útil que el entrenador se enfade en el descanso? La ciencia muestra una curva en U: el malestar moderado ayuda, el extremo perjudica."
  },
  {
   "id": 5,
@@ -1937,7 +1946,9 @@ const ARTICLES_DATA = [
     "type": "source",
     "html": "<strong>Fuente:</strong> Kraus, M. W., Huang, C. &amp; Keltner, D. (2010). <em>Tactile Communication, Cooperation, and Performance: An Ethological Study of the NBA</em>. Emotion, 10(5), 745-749. University of California, Berkeley."
    }
-  ]
+  ],
+  "slug": "contacto-fisico-cohesion-equipo",
+  "meta": "Chocar cinco, abrazos y palmadas al inicio de temporada predicen el rendimiento de un equipo NBA. El contacto como indicador de cooperación."
  },
  {
   "id": 6,
@@ -2037,7 +2048,9 @@ const ARTICLES_DATA = [
     "type": "source",
     "html": "<strong>Fuente:</strong> Mah, C. D., Mah, K. E., Kezirian, E. J. &amp; Dement, W. C. (2011). <em>The effects of sleep extension on the athletic performance of collegiate basketball players</em>. SLEEP, 34(7), 943-950. Stanford University."
    }
-  ]
+  ],
+  "slug": "dormir-rendimiento-baloncesto",
+  "meta": "Dormir más mejoró el tiro, el sprint y el tiempo de reacción de jugadores de Stanford. Qué dice el estudio sobre sueño y rendimiento."
  },
  {
   "id": 7,
@@ -2182,7 +2195,9 @@ const ARTICLES_DATA = [
     "type": "source",
     "html": "<strong>Fuente:</strong> Karamousalidis, G., Foteinakis, P., Konstantinidis, G., Kifonidis, D., Kourtis-Doulkeridis, A. &amp; Symeonidou, S. (2025). <em>A comparison of three-point shooting effectiveness in the Euroleague and NCAA DI basketball</em>. Journal of Human Sport and Exercise, 20(4), 1293-1302. Aristotle University of Thessaloniki."
    }
-  ]
+  ],
+  "slug": "euroleague-ncaa-triple",
+  "meta": "Comparación del lanzamiento de tres entre Euroleague y NCAA a partir de 3.249 tiros: en qué se diferencian el acierto y el contexto."
  },
  {
   "id": 8,
@@ -2326,7 +2341,9 @@ const ARTICLES_DATA = [
     "type": "source",
     "html": "<strong>Fuente:</strong> Cao, S., Geok, S. K., Roslan, S., Sun, H., Lam, S. K. &amp; Qian, S. (2022). <em>Mental Fatigue and Basketball Performance: A Systematic Review</em>. Frontiers in Psychology, 12:819081. Universiti Putra Malaysia &amp; Wuhan Sports University."
    }
-  ]
+  ],
+  "slug": "fatiga-mental-baloncesto",
+  "meta": "La fatiga mental empeora el tiro, las decisiones y aumenta las pérdidas, aunque las piernas estén frescas. Qué dice la evidencia y cómo cuidarla."
  }
 ];
 
@@ -2353,12 +2370,12 @@ function renderTags(art){
 
 function renderArticleCard(art){
     return `
-        <div class="article-card" onclick="openArticle(${art.id})">
+        <a class="article-card" href="articulo/${art.slug}.html">
             <div class="article-meta">${renderTags(art)}</div>
             <h3 class="article-title">${art.title}</h3>
             <p class="article-excerpt">${art.excerpt}</p>
             <div class="article-footer"><span class="read-more">Leer análisis →</span></div>
-        </div>`;
+        </a>`;
 }
 
 function renderFeaturedArticle(){
@@ -2370,7 +2387,8 @@ function renderFeaturedArticle(){
         <h2 class="featured-title">${f.title}</h2>
         <p class="featured-excerpt">${f.excerpt}</p>
         <div class="featured-footer"><span class="featured-read-more">Leer análisis →</span></div>`;
-    el.onclick = () => openArticle(f.id);
+    el.style.cursor = 'pointer';
+    el.onclick = () => { window.location.href = 'articulo/' + f.slug + '.html'; };
 }
 
 function renderHomeArticles(){
@@ -2523,8 +2541,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
         else if(href==='#home'){ e.preventDefault(); showHome(); }
     });
 });
-document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeArticle(); });
-document.getElementById('close-article').addEventListener('click', closeArticle);
 
 renderFeaturedArticle();
 renderMostRead();
@@ -2539,9 +2555,10 @@ renderAllArticles();
         Usamos cookies estrictamente necesarias para el funcionamiento del sitio. No utilizamos cookies de publicidad ni seguimiento.
         <a href="cookies.html" style="color:#93b8d8;margin-left:.5rem">Más información</a>
     </p>
-    <div style="display:flex;gap:.75rem;flex-shrink:0">
+    <div style="display:flex;gap:.75rem;flex-shrink:0;align-items:center">
         <button onclick="acceptCookies()" style="padding:.6rem 1.25rem;background:#2E5077;color:#fff;border:none;border-radius:6px;font-size:.875rem;font-weight:600;cursor:pointer;font-family:Inter,sans-serif">Aceptar</button>
-        <a href="cookies.html" style="padding:.6rem 1.25rem;border:1px solid rgba(255,255,255,.3);color:#e0e0e0;border-radius:6px;font-size:.875rem;font-weight:500;text-decoration:none;display:inline-flex;align-items:center">Ver política</a>
+        <button onclick="rejectCookies()" style="padding:.6rem 1.25rem;background:transparent;color:#e0e0e0;border:1px solid rgba(255,255,255,.3);border-radius:6px;font-size:.875rem;font-weight:500;cursor:pointer;font-family:Inter,sans-serif">Rechazar</button>
+        <a href="cookies.html" style="color:#93b8d8;font-size:.8rem;text-decoration:underline;align-self:center">Más info</a>
     </div>
 </div>
 
@@ -2549,6 +2566,11 @@ renderAllArticles();
 // Cookie banner
 function acceptCookies() {
     localStorage.setItem('be_cookie_consent', '1');
+    document.getElementById('cookie-banner').style.display = 'none';
+}
+function rejectCookies() {
+    // Solo usamos cookies estrictamente necesarias; rechazar simplemente cierra el aviso.
+    localStorage.setItem('be_cookie_consent', '0');
     document.getElementById('cookie-banner').style.display = 'none';
 }
 window.addEventListener('DOMContentLoaded', function() {

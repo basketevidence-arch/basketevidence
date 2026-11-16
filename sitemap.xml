@@ -2,37 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://basketevidence.com/</loc>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-16</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://basketevidence.com/el-proyecto.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://basketevidence.com/newsletter.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-16</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://basketevidence.com/contacto.html</loc>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://basketevidence.com/articulo/estadisticas-ganar-perder-baloncesto.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://basketevidence.com/articulo/tiempos-muertos-baloncesto.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://basketevidence.com/articulo/entrenar-core-baloncesto.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://basketevidence.com/articulo/enfado-entrenador-descanso.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://basketevidence.com/articulo/contacto-fisico-cohesion-equipo.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://basketevidence.com/articulo/dormir-rendimiento-baloncesto.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://basketevidence.com/articulo/euroleague-ncaa-triple.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://basketevidence.com/articulo/fatiga-mental-baloncesto.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://basketevidence.com/aviso-legal.html</loc>
-    <changefreq>yearly</changefreq>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://basketevidence.com/privacidad.html</loc>
-    <changefreq>yearly</changefreq>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://basketevidence.com/cookies.html</loc>
-    <changefreq>yearly</changefreq>
+    <lastmod>2026-11-16</lastmod>
     <priority>0.3</priority>
   </url>
 </urlset>
