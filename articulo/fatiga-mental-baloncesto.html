@@ -645,6 +645,16 @@ a:hover {
     line-height: 1.5;
 }
 .newsletter-legal a { color: #cfe0f2; text-decoration: underline; }
+.newsletter-msg {
+    margin: 1rem auto 0 !important;
+    max-width: 48ch;
+    font-size: .95rem !important;
+    font-weight: 500;
+    line-height: 1.5;
+    min-height: 0;
+}
+.newsletter-msg.ok { color: #bfe8c8 !important; }
+.newsletter-msg.err { color: #f3c6c6 !important; }
 
 .newsletter-form {
     display: flex;
@@ -1118,6 +1128,9 @@ a:hover {
 .back-link:hover { text-decoration: underline; }
 .newsletter-legal { font-size:.8rem; color:rgba(255,255,255,.75); margin-top:1rem; line-height:1.5; }
 .newsletter-legal a { color:#cfe0f2; text-decoration:underline; }
+.newsletter-msg { margin-top:1rem; font-size:.95rem; font-weight:500; line-height:1.5; }
+.newsletter-msg.ok { color:#bfe8c8; }
+.newsletter-msg.err { color:#f3c6c6; }
 </style>
 </head>
 <body>
@@ -1144,11 +1157,12 @@ a:hover {
   <div class="newsletter-content">
     <h2>Entra en el Evidence Club</h2>
     <p>Gratis y sin spam: cada nuevo análisis, directo a tu correo.</p>
-    <form action="https://basketevidence.us9.list-manage.com/subscribe/post?u=ac2038e8422153d197ec35fbb&amp;id=622b40d9c9&amp;f_id=002cd0e3f0" method="post" class="newsletter-form" name="mc-embedded-subscribe-form" target="_blank">
+    <form action="https://basketevidence.us9.list-manage.com/subscribe/post?u=ac2038e8422153d197ec35fbb&amp;id=622b40d9c9&amp;f_id=002cd0e3f0" method="post" class="newsletter-form mc-ajax-form" name="mc-embedded-subscribe-form">
       <input type="email" name="EMAIL" class="newsletter-input" placeholder="Tu email" required>
       <div style="position:absolute;left:-5000px;" aria-hidden="true"><input type="text" name="b_ac2038e8422153d197ec35fbb_622b40d9c9" tabindex="-1" value=""></div>
       <button type="submit" class="newsletter-button">Suscribirme</button>
     </form>
+    <p class="newsletter-msg" aria-live="polite"></p>
     <p class="newsletter-legal">Al suscribirte aceptas nuestra <a href="../privacidad.html">Política de Privacidad</a>. Gestionamos la newsletter con Mailchimp y puedes darte de baja cuando quieras.</p>
   </div>
 </div>
@@ -1160,5 +1174,48 @@ a:hover {
     <p>© 2026 BasketEvidence · <a href="../aviso-legal.html" style="color:rgba(255,255,255,.6)">Aviso legal</a> · <a href="../privacidad.html" style="color:rgba(255,255,255,.6)">Privacidad</a> · <a href="../cookies.html" style="color:rgba(255,255,255,.6)">Cookies</a></p>
   </div>
 </footer>
+<script>
+(function(){
+  document.querySelectorAll('form.mc-ajax-form').forEach(function(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var msg = form.parentNode.querySelector('.newsletter-msg');
+      var btn = form.querySelector('button[type="submit"]');
+      var emailInput = form.querySelector('input[name="EMAIL"]');
+      if(!emailInput || !emailInput.value){ return; }
+      var url = form.getAttribute('action').replace('/post?', '/post-json?');
+      var params = [];
+      form.querySelectorAll('input').forEach(function(inp){
+        if(inp.name){ params.push(encodeURIComponent(inp.name) + '=' + encodeURIComponent(inp.value)); }
+      });
+      var cb = 'mcjsonp_' + Date.now();
+      url += '&' + params.join('&') + '&c=' + cb;
+      if(msg){ msg.className = 'newsletter-msg'; msg.textContent = 'Enviando…'; }
+      if(btn){ btn.disabled = true; }
+      window[cb] = function(data){
+        if(btn){ btn.disabled = false; }
+        if(data && data.result === 'success'){
+          form.style.display = 'none';
+          if(msg){ msg.className = 'newsletter-msg ok'; msg.textContent = '¡Gracias! Te has suscrito al Evidence Club. Si recibes un correo de confirmación, haz clic para completar el alta.'; }
+        } else {
+          var m = (data && data.msg) ? data.msg : 'No se ha podido completar la suscripción. Inténtalo de nuevo.';
+          m = m.replace(/^\d+\s*-\s*/, '');
+          if(/already subscribed|ya está suscrito|ya estás suscrito/i.test(m)){ m = 'Este correo ya está suscrito al Evidence Club.'; }
+          if(msg){ msg.className = 'newsletter-msg err'; msg.innerHTML = m; }
+        }
+        try{ delete window[cb]; }catch(e){ window[cb] = undefined; }
+        if(script && script.parentNode){ script.parentNode.removeChild(script); }
+      };
+      var script = document.createElement('script');
+      script.src = url;
+      script.onerror = function(){
+        if(btn){ btn.disabled = false; }
+        if(msg){ msg.className = 'newsletter-msg err'; msg.textContent = 'No se ha podido conectar. Inténtalo de nuevo en un momento.'; }
+      };
+      document.body.appendChild(script);
+    });
+  });
+})();
+</script>
 </body>
 </html>
