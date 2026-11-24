@@ -2502,11 +2502,8 @@ const ARTICLES_DATA = [
     "html": "<strong>En el final, el balón para los mejores tiradores.</strong> En el último minuto el acierto cae para todos. Por eso los equipos buscan que tiren sus mejores tiradores de libres, y conviene tenerlo previsto: quién recibe en los saques del final y a quién hará falta el rival."
    },
    {
-    "type": "h2",
-    "text": "Qué NO significa"
-   },
-   {
-    "type": "ul",
+    "type": "limits",
+    "title": "Los límites del estudio",
     "items": [
      "<strong>No significa que congelar ayude al rival.</strong> El tirador congelado mete lo mismo que sin parada, ni más ni menos.",
      "<strong>No significa que el tiempo muerto no sirva en el último minuto.</strong> Solo se midió su efecto sobre el tiro libre siguiente, no sobre la defensa ni la siguiente posesión.",
@@ -2514,6 +2511,10 @@ const ARTICLES_DATA = [
      "<strong>No es NBA ni ACB.</strong> Es baloncesto universitario estadounidense, con jugadores que tienen como máximo cuatro años de carrera universitaria. Los autores piden repetirlo en la NBA.",
      "<strong>Es un estudio observacional.</strong> Trabaja con estadísticas de partidos, así que no puede saber por qué pidió cada entrenador el tiempo muerto ni qué pensó el tirador. Además, la muestra de congelamientos es menor (1.428) y solo se analiza el primer tiro de cada serie. Pero el resultado no viene de un estudio aislado: un estudio anterior en la NCAA (Kozar et al., 1993) tampoco encontró efecto. Y la explicación tiene lógica: si el último minuto ya empuja el acierto a la baja, una maniobra que el tirador reconoce como tal tiene poco margen para añadir presión."
     ]
+   },
+   {
+    "type": "takeaway",
+    "html": "Aquella noche de 1976, Molloy falló después de dos tiempos muertos de Rutgers, y la historia lo recuerda como un tirador congelado. Pero los datos dicen otra cosa: en el último minuto, el jugador congelado mete lo mismo que el que tira sin parada. Lo que pesa no es el tiempo muerto del rival. Es el final del partido."
    },
    {
     "type": "source",
@@ -2605,6 +2606,8 @@ function renderBlock(b){
             return `<div class="art-table-wrap"><table class="art-table">${h}${r}</table></div>`;
         }
         case 'source': return `<div class="art-source">${b.html}</div>`;
+        case 'limits': return `<div class="art-limits"><h2>${b.title}</h2><ul>${b.items.map(i=>`<li>${i}</li>`).join('')}</ul></div>`;
+        case 'takeaway': return `<div class="art-takeaway"><p class="takeaway-label">La idea para llevarse</p><p class="takeaway-text">${b.html}</p></div>`;
         default: return '';
     }
 }
