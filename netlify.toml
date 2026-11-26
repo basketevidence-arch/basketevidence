@@ -1,6 +1,10 @@
 [build]
   publish = "."
 
+# No reescribir enlaces a versión sin .html: la web usa .html en canonical, sitemap y enlaces
+[build.processing.html]
+  pretty_urls = false
+
 [[headers]]
   for = "/*"
   [headers.values]
@@ -22,4 +26,81 @@
 [[redirects]]
   from = "/blog"
   to = "/"
+  status = 301
+
+# Versiones sin .html -> versión canónica con .html
+
+[[redirects]]
+  from = "/el-proyecto"
+  to = "/el-proyecto.html"
+  status = 301
+
+[[redirects]]
+  from = "/contacto"
+  to = "/contacto.html"
+  status = 301
+
+[[redirects]]
+  from = "/newsletter"
+  to = "/newsletter.html"
+  status = 301
+
+[[redirects]]
+  from = "/aviso-legal"
+  to = "/aviso-legal.html"
+  status = 301
+
+[[redirects]]
+  from = "/privacidad"
+  to = "/privacidad.html"
+  status = 301
+
+[[redirects]]
+  from = "/cookies"
+  to = "/cookies.html"
+  status = 301
+
+[[redirects]]
+  from = "/articulo/congelar-tirador-tiro-libre"
+  to = "/articulo/congelar-tirador-tiro-libre.html"
+  status = 301
+
+[[redirects]]
+  from = "/articulo/contacto-fisico-cohesion-equipo"
+  to = "/articulo/contacto-fisico-cohesion-equipo.html"
+  status = 301
+
+[[redirects]]
+  from = "/articulo/dormir-rendimiento-baloncesto"
+  to = "/articulo/dormir-rendimiento-baloncesto.html"
+  status = 301
+
+[[redirects]]
+  from = "/articulo/enfado-entrenador-descanso"
+  to = "/articulo/enfado-entrenador-descanso.html"
+  status = 301
+
+[[redirects]]
+  from = "/articulo/entrenar-core-baloncesto"
+  to = "/articulo/entrenar-core-baloncesto.html"
+  status = 301
+
+[[redirects]]
+  from = "/articulo/estadisticas-ganar-perder-baloncesto"
+  to = "/articulo/estadisticas-ganar-perder-baloncesto.html"
+  status = 301
+
+[[redirects]]
+  from = "/articulo/euroleague-ncaa-triple"
+  to = "/articulo/euroleague-ncaa-triple.html"
+  status = 301
+
+[[redirects]]
+  from = "/articulo/fatiga-mental-baloncesto"
+  to = "/articulo/fatiga-mental-baloncesto.html"
+  status = 301
+
+[[redirects]]
+  from = "/articulo/tiempos-muertos-baloncesto"
+  to = "/articulo/tiempos-muertos-baloncesto.html"
   status = 301
